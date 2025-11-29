@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UserBX - Work Listing Page - Explore the Creative Gallery">
+    <title>Work Listing - UserBX</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/work-listing.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6526EF',
+                        secondary: '#A78BFA',
+                        dark: '#0F0A1F',
+                        darkGray: '#1A1429',
+                    },
+                    fontFamily: {
+                        sans: ['Bricolage Grotesque', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans antialiased bg-[#efefef] text-gray-900">
+
+    <!-- HEADER -->
+    <header id="site-header" style="background-color: rgb(15 10 31 / 0.9);"
+        class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-0 transition-colors duration-300 ease-in-out"
+        data-scroll-class="bg-white/95 dark:bg-dark/90 backdrop-blur-md shadow-sm border-0" data-scroll-threshold="80"
+        aria-label="UserBX site header">
+        <div class="site-container container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="header-wrapper flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <a href="index.html" class="site-logo flex-shrink-0 focus:outline-none" aria-label="UserBX Home">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="h-7 w-auto" width="147" height="29">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="header-nav hidden md:flex items-center space-x-1 bg-darkGray/80 rounded-full px-2 py-0 h-[42px]"
+                    aria-label="Main Navigation">
+                    <a href="index.html#home"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Home</a>
+                    <a href="index.html#about"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">About</a>
+                    <a href="index.html#services"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Services</a>
+                    <a href="work-listing.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/90 hover:text-white transition-all duration-200 active">Portfolio</a>
+                    <a href="index.html#contact"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Contact</a>
+                </nav>
+
+                <!-- Contact Info & Menu Button -->
+                <div class="contact-info flex items-center space-x-20">
+                    <div class="hidden lg:flex items-center space-x-6 text-sm text-white/70">
+                        <a href="mailto:connect@userbx.io"
+                            class="flex items-center space-x-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">
+                            <span class="material-icons text-base">
+                                <img src="./assets/img/icons/mail.svg" alt="Email Icon">
+                            </span>
+                            <span>connect@userbx.io</span>
+                        </a>
+                        <a href="tel:+17045550127"
+                            class="flex items-center space-x-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">
+                            <span class="material-icons text-base">
+                                <img src="./assets/img/icons/phone.svg" alt="Phone Icon">
+                            </span>
+                            <span>(704) 555-0127</span>
+                        </a>
+                    </div>
+
+                    <!-- Menu Toggle Button -->
+                    <button id="menu-toggle"
+                        class="flex items-center space-x-2 text-white bg-transparent outline-none px-4 py-2 rounded-full transition-all duration-200 focus:outline-none"
+                        aria-expanded="false" aria-controls="fullscreen-menu" aria-label="Open navigation menu">
+                        <span class="material-icons">
+                            <img src="./assets/img/icons/menu.svg" alt="Menu Icon">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENU -->
+    <div id="fullscreen-menu" class="fixed inset-0 z-[100] bg-dark hidden" role="dialog" aria-modal="true"
+        aria-labelledby="menu-title" inert>
+        <div class="fullscreen-menu-content h-full overflow-y-auto">
+            <div class="fullscreen-menu-container h-full mx-auto">
+
+                <!-- Menu Header -->
+                <div class="fullscreen-menu-header flex items-center justify-between mb-16">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="h-7 w-auto" width="147" height="29">
+
+                    <!-- Close Button -->
+                    <button id="menu-close"
+                        class="flex items-center space-x-2 text-white hover:text-primary transition-colors focus:outline-none"
+                        aria-label="Close navigation menu">
+                        <span class="material-icons text-3xl">
+                            <img src="./assets/img/icons/close.svg" alt="Close Icon">
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Two Column Menu Grid -->
+                <div class="fullscreen-menu-body grid md:grid-cols-2 max-w-full h-full gap-0">
+
+                    <!-- Left Column: Primary Navigation -->
+                    <div class="fullscreen-menu-left">
+
+                        <nav aria-label="Primary Menu Navigation">
+                            <ul class="space-y-4">
+                                <li><a href="index.html#home"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Home</a>
+                                </li>
+                                <li><a href="index.html#about"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">About</a>
+                                </li>
+                                <li><a href="index.html#services"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Services</a>
+                                </li>
+                                <li><a href="work-listing.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Portfolio</a>
+                                </li>
+                                <li><a href="index.html#blog"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Blog</a>
+                                </li>
+                                <li><a href="index.html#contact"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                    <!-- Right Column: Secondary Links & CTAs -->
+                    <div class="fullscreen-menu-right space-y-12 relative">
+                        <div class="fullscreen-menu-image">
+                            <img src="./assets/img/x.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="pt-20">
+
+        <!-- WORK LISTING HERO SECTION -->
+        <section class="work-listing-hero-section py-12 lg:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Title -->
+                <div class="work-listing-header text-center mb-12">
+                    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-medium leading-tight text-black uppercase mb-8">
+                        Explore the Creative Gallery
+                    </h1>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="work-listing-filters-wrapper flex justify-center mb-12">
+                    <div class="work-listing-filters flex flex-wrap justify-center gap-0">
+                        <button class="work-filter-btn active px-6 py-3 rounded-xl text-lg font-semibold text-black hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                                data-filter="all" aria-label="Show all work">
+                            All
+                        </button>
+                        <button class="work-filter-btn px-6 py-3 rounded-xl text-lg font-light text-gray-500 hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                                data-filter="branding" aria-label="Filter by branding">
+                            Branding
+                        </button>
+                        <button class="work-filter-btn px-6 py-3 rounded-xl text-lg font-light text-gray-500 hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                                data-filter="ui-ux" aria-label="Filter by UI/UX Design">
+                            UI/UX Design
+                        </button>
+                        <button class="work-filter-btn px-6 py-3 rounded-xl text-lg font-light text-gray-500 hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                                data-filter="digital" aria-label="Filter by Digital Designs">
+                            Digital Designs
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK GALLERY GRID -->
+        <section class="work-listing-gallery py-8">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="work-gallery-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" id="work-gallery-grid">
+                    
+                    <!-- Work Card 1 -->
+                    <article class="work-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                             data-category="branding">
+                        <a href="work-detail.html" class="block focus:outline-none focus:ring-2 focus:ring-primary rounded-xl">
+                            <div class="work-card-image aspect-[4/3] overflow-hidden rounded-t-xl">
+                                <img src="assets/img/portfolio-01.png" 
+                                     alt="Hope dies last - Branding project" 
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                     loading="lazy">
+                            </div>
+                            <div class="work-card-content p-6">
+                                <div class="work-card-meta flex items-center justify-between mb-3">
+                                    <time class="text-sm text-black" datetime="2022-03-16">16. March 2022</time>
+                                    <span class="work-card-tag border border-primary rounded-full px-3 py-1 text-xs uppercase text-primary">
+                                        branding
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-medium text-black mb-3 group-hover:text-primary transition-colors">
+                                    Hope dies last
+                                </h3>
+                                <p class="text-base text-black leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Porttitor leo a diam.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Work Card 2 -->
+                    <article class="work-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                             data-category="ui-ux">
+                        <a href="work-detail.html" class="block focus:outline-none focus:ring-2 focus:ring-primary rounded-xl">
+                            <div class="work-card-image aspect-[4/3] overflow-hidden rounded-t-xl">
+                                <img src="assets/img/portfolio-05.png" 
+                                     alt="The devil is the details - UI/UX Design project" 
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                     loading="lazy">
+                            </div>
+                            <div class="work-card-content p-6">
+                                <div class="work-card-meta flex items-center justify-between mb-3">
+                                    <time class="text-sm text-black" datetime="2022-03-16">16. March 2022</time>
+                                    <span class="work-card-tag border border-primary rounded-full px-3 py-1 text-xs uppercase text-primary">
+                                        UI/UX Design
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-black mb-3 group-hover:text-primary transition-colors">
+                                    The devil is the details
+                                </h3>
+                                <p class="text-base text-black leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Porttitor leo a diam.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Work Card 3 -->
+                    <article class="work-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                             data-category="digital">
+                        <a href="work-detail.html" class="block focus:outline-none focus:ring-2 focus:ring-primary rounded-xl">
+                            <div class="work-card-image aspect-[4/3] overflow-hidden rounded-t-xl">
+                                <img src="assets/img/portfolio-04.png" 
+                                     alt="An indestructible hope - Digital Design project" 
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                     loading="lazy">
+                            </div>
+                            <div class="work-card-content p-6">
+                                <div class="work-card-meta flex items-center justify-between mb-3">
+                                    <time class="text-sm text-black" datetime="2022-03-16">16. March 2022</time>
+                                    <span class="work-card-tag border border-primary rounded-full px-3 py-1 text-xs uppercase text-primary">
+                                        digital DESIGN
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-black mb-3 group-hover:text-primary transition-colors">
+                                    An indestructible hope
+                                </h3>
+                                <p class="text-base text-black leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Porttitor leo a diam.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Work Card 4 -->
+                    <article class="work-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                             data-category="branding">
+                        <a href="work-detail.html" class="block focus:outline-none focus:ring-2 focus:ring-primary rounded-xl">
+                            <div class="work-card-image aspect-[4/3] overflow-hidden rounded-t-xl">
+                                <img src="assets/img/portfolio-02.png" 
+                                     alt="The chains of our lives - Branding project" 
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                     loading="lazy">
+                            </div>
+                            <div class="work-card-content p-6">
+                                <div class="work-card-meta flex items-center justify-between mb-3">
+                                    <time class="text-sm text-black" datetime="2022-03-16">16. March 2022</time>
+                                    <span class="work-card-tag border border-primary rounded-full px-3 py-1 text-xs uppercase text-primary">
+                                        branding
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-black mb-3 group-hover:text-primary transition-colors">
+                                    The chains of our lives
+                                </h3>
+                                <p class="text-base text-black leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Porttitor leo a diam.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Work Card 5 -->
+                    <article class="work-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                             data-category="ui-ux">
+                        <a href="work-detail.html" class="block focus:outline-none focus:ring-2 focus:ring-primary rounded-xl">
+                            <div class="work-card-image aspect-[4/3] overflow-hidden rounded-t-xl">
+                                <img src="assets/img/portfolio-06.png" 
+                                     alt="Through the eyes of street artists - UI/UX Design project" 
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                     loading="lazy">
+                            </div>
+                            <div class="work-card-content p-6">
+                                <div class="work-card-meta flex items-center justify-between mb-3">
+                                    <time class="text-sm text-black" datetime="2022-03-16">16. March 2022</time>
+                                    <span class="work-card-tag border border-primary rounded-full px-3 py-1 text-xs uppercase text-primary">
+                                        UI/UX Design
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-black mb-3 group-hover:text-primary transition-colors">
+                                    Through the eyes of street artists
+                                </h3>
+                                <p class="text-base text-black leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Porttitor leo a diam.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Work Card 6 -->
+                    <article class="work-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                             data-category="digital">
+                        <a href="work-detail.html" class="block focus:outline-none focus:ring-2 focus:ring-primary rounded-xl">
+                            <div class="work-card-image aspect-[4/3] overflow-hidden rounded-t-xl">
+                                <img src="assets/img/portfolio-07.png" 
+                                     alt="Artists who want to rise above - Digital Design project" 
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                     loading="lazy">
+                            </div>
+                            <div class="work-card-content p-6">
+                                <div class="work-card-meta flex items-center justify-between mb-3">
+                                    <time class="text-sm text-black" datetime="2022-03-16">16. March 2022</time>
+                                    <span class="work-card-tag border border-primary rounded-full px-3 py-1 text-xs uppercase text-primary">
+                                        digital DESIGN
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-black mb-3 group-hover:text-primary transition-colors">
+                                    Artists who want to rise above
+                                </h3>
+                                <p class="text-base text-black leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Porttitor leo a diam.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Work Card 7 -->
+                    <article class="work-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                             data-category="branding">
+                        <a href="work-detail.html" class="block focus:outline-none focus:ring-2 focus:ring-primary rounded-xl">
+                            <div class="work-card-image aspect-[4/3] overflow-hidden rounded-t-xl">
+                                <img src="assets/img/portfolio-03.png" 
+                                     alt="Hope dies last - Branding project" 
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                     loading="lazy">
+                            </div>
+                            <div class="work-card-content p-6">
+                                <div class="work-card-meta flex items-center justify-between mb-3">
+                                    <time class="text-sm text-black" datetime="2022-03-16">16. March 2022</time>
+                                    <span class="work-card-tag border border-primary rounded-full px-3 py-1 text-xs uppercase text-primary">
+                                        branding
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-medium text-black mb-3 group-hover:text-primary transition-colors">
+                                    Hope dies last
+                                </h3>
+                                <p class="text-base text-black leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Porttitor leo a diam.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Work Card 8 -->
+                    <article class="work-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                             data-category="ui-ux">
+                        <a href="work-detail.html" class="block focus:outline-none focus:ring-2 focus:ring-primary rounded-xl">
+                            <div class="work-card-image aspect-[4/3] overflow-hidden rounded-t-xl">
+                                <img src="assets/img/portfolio-08.png" 
+                                     alt="The devil is the details - UI/UX Design project" 
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                     loading="lazy">
+                            </div>
+                            <div class="work-card-content p-6">
+                                <div class="work-card-meta flex items-center justify-between mb-3">
+                                    <time class="text-sm text-black" datetime="2022-03-16">16. March 2022</time>
+                                    <span class="work-card-tag border border-primary rounded-full px-3 py-1 text-xs uppercase text-primary">
+                                        UI/UX Design
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-black mb-3 group-hover:text-primary transition-colors">
+                                    The devil is the details
+                                </h3>
+                                <p class="text-base text-black leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Porttitor leo a diam.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Work Card 9 -->
+                    <article class="work-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+                             data-category="digital">
+                        <a href="work-detail.html" class="block focus:outline-none focus:ring-2 focus:ring-primary rounded-xl">
+                            <div class="work-card-image aspect-[4/3] overflow-hidden rounded-t-xl">
+                                <img src="assets/img/portfolio-09.png" 
+                                     alt="The chains of our lives - Digital Design project" 
+                                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                     loading="lazy">
+                            </div>
+                            <div class="work-card-content p-6">
+                                <div class="work-card-meta flex items-center justify-between mb-3">
+                                    <time class="text-sm text-black" datetime="2022-03-16">16. March 2022</time>
+                                    <span class="work-card-tag border border-primary rounded-full px-3 py-1 text-xs uppercase text-primary">
+                                        digital DESIGN
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-black mb-3 group-hover:text-primary transition-colors">
+                                    The chains of our lives
+                                </h3>
+                                <p class="text-base text-black leading-relaxed">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Porttitor leo a diam.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="work-listing-pagination flex items-center justify-center gap-2 mt-12">
+                    <button class="pagination-btn pagination-control w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="First page">
+                        <span class="material-icons text-gray-600 text-sm">first_page</span>
+                    </button>
+                    <button class="pagination-btn pagination-control w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Previous page">
+                        <span class="material-icons text-gray-600 text-sm">chevron_left</span>
+                    </button>
+                    <button class="pagination-btn pagination-page active w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Page 1" aria-current="page">
+                        <span class="text-sm font-semibold">1</span>
+                    </button>
+                    <button class="pagination-btn pagination-page w-8 h-8 rounded-full bg-white border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Page 2">
+                        <span class="text-sm font-semibold">2</span>
+                    </button>
+                    <button class="pagination-btn pagination-page w-8 h-8 rounded-full bg-white border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Page 3">
+                        <span class="text-sm font-semibold">3</span>
+                    </button>
+                    <button class="pagination-btn pagination-page w-8 h-8 rounded-full bg-white text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="More pages">
+                        <span class="text-sm font-semibold">...</span>
+                    </button>
+                    <button class="pagination-btn pagination-page w-8 h-8 rounded-full bg-white border border-gray-200 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Page 10">
+                        <span class="text-sm font-semibold">10</span>
+                    </button>
+                    <button class="pagination-btn pagination-control w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Next page">
+                        <span class="material-icons text-gray-600 text-sm">chevron_right</span>
+                    </button>
+                    <button class="pagination-btn pagination-control w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Last page">
+                        <span class="material-icons text-gray-600 text-sm">last_page</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER CTA SECTION -->
+        <section class="news-letter-section py-20 lg:py-32 relative overflow-hidden min-h-[667px] flex items-center">
+            <!-- Animated Background -->
+            <div class="news-letter-bg absolute inset-0">
+                <img src="assets/img/bg-waves.jpg" 
+                     alt="" 
+                     class="w-full h-full object-cover" 
+                     loading="lazy">
+            </div>
+            <div class="news-letter-overlay absolute inset-0 bg-black/55"></div>
+
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="news-letter-main grid md:grid-cols-[50%_50%] gap-12 items-center">
+                    <div class="news-letter-content">
+                        <h2 class="text-4xl lg:text-5xl xl:text-6xl font-medium text-white leading-tight uppercase tracking-[-0.4px]">
+                            Sign Up to Discover Startup Features
+                        </h2>
+                    </div>
+                    <div class="news-letter-actions space-y-6">
+                        <p class="text-xl lg:text-3xl text-white/90 leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        </p>
+                        <div class="news-letter-action-wrapper flex items-center space-x-4">
+                            <a href="#services"
+                                class="news-letter-action-icon inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                                aria-label="View Services">
+                                <span class="material-icons">arrow_forward</span>
+                            </a>
+                            <a href="#services" class="news-letter-action-btn btn btn-primary">
+                                Work With Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer bg-black text-white pt-20">
+        <div class="site-container container mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Footer Top -->
+            <div
+                class="footer-top grid gap-6 md:gap-8 lg:gap-12 mb-16 md:grid-cols-[1fr_1fr] lg:grid-cols-[minmax(200px,268px)_minmax(300px,500px)_1fr_1fr_1fr]">
+
+                <!-- Brand Column -->
+                <div class="footer-col footer-col-logo lg:col-span-1">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="footer-col-logo h-7 w-auto mb-6" width="147"
+                        height="29">
+                    <p class="footer-col-content text-white/60 leading-relaxed mb-6">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem
+                    </p>
+                    <div class="footer-col-social flex space-x-3">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Facebook">
+                            <span class="text-lg"><img src="./assets/img/icons/facebook.svg" alt="Facebook"></span>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Instagram">
+                            <span class="text-lg"><img src="./assets/img/icons/instagram.svg" alt="Instagram"></span>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Twitter">
+                            <span class="text-lg"><img src="./assets/img/icons/twitter.svg" alt="Twitter"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-map">
+                    <img src="./assets/img/footer-map.png" alt="UserBX Global Map" class="w-full h-auto" width="250"
+                        height="150" loading="lazy">
+                </div>
+
+                <!-- Company Column -->
+                <div class="footer-col footer-col-nav">
+                    <h3 class="text-white font-bold mb-6 text-lg">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#about"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">About</a>
+                        </li>
+                        <li><a href="index.html#services"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Services</a>
+                        </li>
+                        <li><a href="index.html#careers"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Careers</a>
+                        </li>
+                        <li><a href="work-listing.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Works</a>
+                        </li>
+                        <li><a href="index.html#news"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">News
+                                & Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div class="footer-col footer-col-nav">
+                    <h3 class="text-white font-bold mb-6 text-lg">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#branding"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Branding</a>
+                        </li>
+                        <li><a href="#design"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Experience
+                                Design</a></li>
+                        <li><a href="#technology"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Technology</a>
+                        </li>
+                        <li><a href="#marketing"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Digital
+                                Marketing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get in Touch Column -->
+                <div class="footer-col footer-col-contact">
+                    <h3 class="text-white font-bold mb-6 text-lg">Get in Touch</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="mailto:connect@userbx.io"
+                                class="flex items-start space-x-3 text-white/60 hover:text-white transition-colors group focus:outline-none focus:text-white">
+                                <span>connect@userbx.io</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+17045550127"
+                                class="flex items-start space-x-3 text-white/60 hover:text-white transition-colors group focus:outline-none focus:text-white">
+                                <span>(704) 555-0127</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom border-t border-white/10 bg-[#6526EF] h-[73px] flex items-center justify-center">
+            <p class="text-center text-white text-sm">
+                UserBX © 2025. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/work-listing.js" defer></script>
+</body>
+
+</html>
+
