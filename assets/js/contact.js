@@ -224,8 +224,22 @@
         });
     }
 
-    // Map is embedded via iframe, no JavaScript initialization needed
-    // The iframe provides full Google Maps functionality without requiring an API key
+    // Map loading handler - hide loading text when map iframe loads
+    const mapContainer = document.querySelector('.contact-map-container');
+    const mapIframe = document.getElementById('google-map-iframe');
+    
+    if (mapIframe && mapContainer) {
+        mapIframe.addEventListener('load', function() {
+            mapContainer.classList.add('map-loaded');
+        });
+        
+        // Fallback: if iframe doesn't fire load event, hide after a delay
+        setTimeout(function() {
+            if (!mapContainer.classList.contains('map-loaded')) {
+                mapContainer.classList.add('map-loaded');
+            }
+        }, 3000);
+    }
 
     // Accessibility: Announce form errors to screen readers
     if (contactForm) {

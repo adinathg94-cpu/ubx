@@ -242,6 +242,12 @@
     font-size: 1rem;
     color: #6b7280;
     z-index: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.contact-map-container.map-loaded::before {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .contact-map-container iframe {
