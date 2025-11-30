@@ -1103,3 +1103,95 @@ span.update-read-more-btn {
 .services-hero {
     padding-top: 82px;
 }
+
+/* Float Cube Rotation Animation */
+@keyframes rotate-cube {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.float-cube-rotate {
+    animation: rotate-cube 8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .float-cube-rotate {
+        animation: none;
+    }
+}
+
+/* Float Ring Parallax Effect on Hero Hover */
+.float-ring-parallax {
+    transition: transform 0.3s ease-out;
+    will-change: transform;
+}
+
+.services-hero:hover .float-ring-parallax {
+    transform: translate(calc(-50% + 10px), calc(-50% - 10px));
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .float-ring-parallax {
+        transition: none;
+    }
+    
+    .services-hero:hover .float-ring-parallax {
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Float Crystal Vibration Effect on Hero Hover */
+@keyframes vibrate {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    10% {
+        transform: translate(-2px, -1px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(2px, 1px) rotate(1deg);
+    }
+    30% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    40% {
+        transform: translate(1px, -2px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-2px, 1px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(2px, -1px) rotate(1deg);
+    }
+    70% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(1px, 2px) rotate(1deg);
+    }
+    90% {
+        transform: translate(-2px, -1px) rotate(-1deg);
+    }
+}
+
+.float-crystal-vibrate {
+    transition: transform 0.2s ease-out;
+}
+
+.services-hero:hover .float-crystal-vibrate {
+    animation: vibrate 0.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .float-crystal-vibrate {
+        transition: none;
+    }
+    
+    .services-hero:hover .float-crystal-vibrate {
+        animation: none;
+    }
+}
