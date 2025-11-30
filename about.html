@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UserBX - Empowering Businesses Through Creativity and Technology">
+    <title>About Us - UserBX</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom-new.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/about-new.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6526EF',
+                        secondary: '#A78BFA',
+                        dark: '#0F0A1F',
+                        darkGray: '#1A1429',
+                    },
+                    fontFamily: {
+                        sans: ['Bricolage Grotesque', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans antialiased bg-white text-gray-900">
+
+    <!-- HEADER -->
+    <header id="site-header"
+        class="fixed top-0 left-0 right-0 z-50 bg-transparent border-0 transition-colors duration-300 ease-in-out"
+        data-scroll-class="bg-white/95 dark:bg-dark/90 backdrop-blur-md shadow-sm border-0" data-scroll-threshold="80"
+        aria-label="UserBX site header">
+        <div class="site-container container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="header-wrapper flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <a href="index.html" class="site-logo flex-shrink-0 focus:outline-none" aria-label="UserBX Home">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="h-7 w-auto" width="147" height="29">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="header-nav hidden md:flex items-center space-x-1 bg-darkGray/80 rounded-full px-2 py-0 h-[42px]"
+                    aria-label="Main Navigation">
+                    <a href="index.html#home"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/90 hover:text-white transition-all duration-200">Home</a>
+                    <a href="about.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200 active">About</a>
+                    <a href="index.html#services"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Services</a>
+                    <a href="work-detail.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Portfolio</a>
+                    <a href="index.html#contact"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Contact</a>
+                </nav>
+
+                <!-- Contact Info & Menu Button -->
+                <div class="contact-info flex items-center space-x-20">
+                    <div class="hidden lg:flex items-center space-x-6 text-sm text-white/70">
+                        <a href="mailto:connect@userbx.io"
+                            class="flex items-center space-x-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">
+                            <span class="material-icons text-base">
+                                <img src="./assets/img/icons/mail.svg" alt="Email Icon">
+                            </span>
+                            <span>connect@userbx.io</span>
+                        </a>
+                        <a href="tel:+17045550127"
+                            class="flex items-center space-x-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">
+                            <span class="material-icons text-base">
+                                <img src="./assets/img/icons/phone.svg" alt="Phone Icon">
+                            </span>
+                            <span>(704) 555-0127</span>
+                        </a>
+                    </div>
+
+                    <!-- Menu Toggle Button -->
+                    <button id="menu-toggle"
+                        class="flex lg:hidden items-center space-x-2 text-white bg-transparent outline-none px-4 py-2 rounded-full transition-all duration-200 focus:outline-none"
+                        aria-expanded="false" aria-controls="fullscreen-menu" aria-label="Open navigation menu">
+                        <span class="material-icons">
+                            <img src="./assets/img/icons/menu.svg" alt="Menu Icon">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENU -->
+    <div id="fullscreen-menu" class="fixed inset-0 z-[100] bg-dark hidden" role="dialog" aria-modal="true"
+        aria-labelledby="menu-title" inert>
+        <div class="fullscreen-menu-content h-full overflow-y-auto">
+            <div class="fullscreen-menu-container h-full mx-auto">
+
+                <!-- Menu Header -->
+                <div class="fullscreen-menu-header flex items-center justify-between mb-16">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="h-7 w-auto" width="147" height="29">
+
+                    <!-- Close Button -->
+                    <button id="menu-close"
+                        class="flex items-center space-x-2 text-white hover:text-primary transition-colors focus:outline-none"
+                        aria-label="Close navigation menu">
+                        <span class="material-icons text-3xl">
+                            <img src="./assets/img/icons/close.svg" alt="Close Icon">
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Two Column Menu Grid -->
+                <div class="fullscreen-menu-body grid md:grid-cols-2 max-w-full h-full gap-0">
+
+                    <!-- Left Column: Primary Navigation -->
+                    <div class="fullscreen-menu-left">
+
+                        <nav aria-label="Primary Menu Navigation">
+                            <ul class="space-y-4">
+                                <li><a href="index.html#home"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Home</a>
+                                </li>
+                                <li><a href="about.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">About</a>
+                                </li>
+                                <li><a href="index.html#services"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Services</a>
+                                </li>
+                                <li><a href="work-detail.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Portfolio</a>
+                                </li>
+                                <li><a href="index.html#blog"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Blog</a>
+                                </li>
+                                <li><a href="index.html#contact"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                    <!-- Right Column: Secondary Links & CTAs -->
+                    <div class="fullscreen-menu-right space-y-12 relative">
+                        <div class="fullscreen-menu-image">
+                            <img src="./assets/img/x.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+
+        <!-- HERO SECTION -->
+        <section class="about-hero-section relative min-h-[60vh] flex items-center bg-dark pt-20">
+            <div class="about-hero-bg"></div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight">
+                        Empowering Businesses Through <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Creativity</span>
+                        and Technology
+                    </h1>
+                    <p class="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mx-auto font-body">
+                        We are UserBX, a Dublin-based digital agency serving Ireland, including Wexford. We craft
+                        digital experiences that matter.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHO WE ARE SECTION -->
+        <section class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                            <img src="assets/img/service-ui-design.jpg" alt="Our Team"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <!-- Decorative Elements -->
+                        <div class="absolute -bottom-8 -right-8 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10">
+                        </div>
+                        <div class="absolute -top-8 -left-8 w-48 h-48 bg-secondary/10 rounded-full blur-3xl -z-10">
+                        </div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="space-y-4">
+                            <h2 class="text-4xl lg:text-5xl font-black text-dark">Who We Are</h2>
+                            <p class="text-lg text-gray-600 leading-relaxed font-body">
+                                UserBX is more than just a digital agency; we are a creative IT company with a
+                                passionate team of designers and developers dedicated to transforming businesses through
+                                innovative digital solutions.
+                            </p>
+                            <p class="text-lg text-gray-600 leading-relaxed font-body">
+                                We believe in the power of collaboration and the impact of well-executed technology. Our
+                                mission is to deliver quality that drives client success.
+                            </p>
+                        </div>
+
+                        <!-- Values -->
+                        <div class="grid sm:grid-cols-3 gap-6 pt-8">
+                            <div class="space-y-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                    <span class="material-icons">lightbulb</span>
+                                </div>
+                                <h3 class="font-bold text-xl text-dark">Innovation</h3>
+                            </div>
+                            <div class="space-y-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                    <span class="material-icons">verified</span>
+                                </div>
+                                <h3 class="font-bold text-xl text-dark">Quality</h3>
+                            </div>
+                            <div class="space-y-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                    <span class="material-icons">trending_up</span>
+                                </div>
+                                <h3 class="font-bold text-xl text-dark">Success</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT WE DO SECTION -->
+        <section class="py-20 lg:py-32 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-black text-dark mb-6">What We Do</h2>
+                    <p class="text-lg text-gray-600 font-body">
+                        We provide cohesive digital solutions that strengthen your online presence. From design to
+                        development, we handle it all.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="service-card-new bg-white p-8 rounded-2xl border border-gray-100">
+                        <div
+                            class="service-icon-wrapper w-14 h-14 rounded-xl bg-primary text-white flex items-center justify-center mb-6">
+                            <span class="material-icons text-3xl">palette</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-3">UI/UX Design</h3>
+                        <p class="text-gray-600 font-body">Creating intuitive and visually stunning interfaces that
+                            users love.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card-new bg-white p-8 rounded-2xl border border-gray-100">
+                        <div
+                            class="service-icon-wrapper w-14 h-14 rounded-xl bg-primary text-white flex items-center justify-center mb-6">
+                            <span class="material-icons text-3xl">code</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-3">Web Development</h3>
+                        <p class="text-gray-600 font-body">Building robust, scalable, and high-performance websites.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card-new bg-white p-8 rounded-2xl border border-gray-100">
+                        <div
+                            class="service-icon-wrapper w-14 h-14 rounded-xl bg-primary text-white flex items-center justify-center mb-6">
+                            <span class="material-icons text-3xl">rocket_launch</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-3">Digital Branding</h3>
+                        <p class="text-gray-600 font-body">Crafting unique brand identities that stand out in the
+                            market.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card-new bg-white p-8 rounded-2xl border border-gray-100">
+                        <div
+                            class="service-icon-wrapper w-14 h-14 rounded-xl bg-primary text-white flex items-center justify-center mb-6">
+                            <span class="material-icons text-3xl">campaign</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-3">Digital Marketing</h3>
+                        <p class="text-gray-600 font-body">Driving growth through strategic online marketing campaigns.
+                        </p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card-new bg-white p-8 rounded-2xl border border-gray-100">
+                        <div
+                            class="service-icon-wrapper w-14 h-14 rounded-xl bg-primary text-white flex items-center justify-center mb-6">
+                            <span class="material-icons text-3xl">smartphone</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-3">App Development</h3>
+                        <p class="text-gray-600 font-body">Developing seamless mobile experiences for iOS and Android.
+                        </p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="service-card-new bg-white p-8 rounded-2xl border border-gray-100">
+                        <div
+                            class="service-icon-wrapper w-14 h-14 rounded-xl bg-primary text-white flex items-center justify-center mb-6">
+                            <span class="material-icons text-3xl">support_agent</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-3">Technical Support</h3>
+                        <p class="text-gray-600 font-body">Ensuring your digital assets run smoothly with 24/7 support.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW WE WORK SECTION -->
+        <section class="py-20 lg:py-32 bg-white overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <h2 class="text-4xl lg:text-5xl font-black text-dark mb-6">How We Work</h2>
+                    <p class="text-lg text-gray-600 font-body">
+                        Our structured "6-D" process ensures we deliver excellence at every step.
+                    </p>
+                </div>
+
+                <div class="process-timeline max-w-4xl mx-auto">
+                    <!-- Step 1 -->
+                    <div class="process-step">
+                        <div class="process-marker">1</div>
+                        <div class="process-content-wrapper">
+                            <h3 class="text-2xl font-bold text-primary mb-2">Discover</h3>
+                            <p class="text-gray-600 font-body">We start by understanding your business goals and
+                                audience needs through in-depth research.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="process-step">
+                        <div class="process-marker">2</div>
+                        <div class="process-content-wrapper">
+                            <h3 class="text-2xl font-bold text-primary mb-2">Define</h3>
+                            <p class="text-gray-600 font-body">We define the project scope, strategy, and roadmap to
+                                ensure a clear path to success.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="process-step">
+                        <div class="process-marker">3</div>
+                        <div class="process-content-wrapper">
+                            <h3 class="text-2xl font-bold text-primary mb-2">Design</h3>
+                            <p class="text-gray-600 font-body">Our designers create visually stunning and user-centric
+                                designs that align with your brand.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="process-step">
+                        <div class="process-marker">4</div>
+                        <div class="process-content-wrapper">
+                            <h3 class="text-2xl font-bold text-primary mb-2">Develop</h3>
+                            <p class="text-gray-600 font-body">We bring designs to life using the latest technologies
+                                and coding best practices.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="process-step">
+                        <div class="process-marker">5</div>
+                        <div class="process-content-wrapper">
+                            <h3 class="text-2xl font-bold text-primary mb-2">Deploy</h3>
+                            <p class="text-gray-600 font-body">We rigorously test and launch your project, ensuring a
+                                smooth and successful deployment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="process-step">
+                        <div class="process-marker">6</div>
+                        <div class="process-content-wrapper">
+                            <h3 class="text-2xl font-bold text-primary mb-2">Deliver</h3>
+                            <p class="text-gray-600 font-body">We deliver the final product and provide ongoing support
+                                to help you grow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGHLIGHTS SECTION -->
+        <section class="py-20 lg:py-32 bg-dark text-white relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20">
+                <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary rounded-full blur-[100px]">
+                </div>
+                <div
+                    class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-secondary rounded-full blur-[100px]">
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-4xl lg:text-5xl font-black mb-8">Our Impact</h2>
+                        <p class="text-xl text-white/80 mb-12 font-body">
+                            We take pride in our work and the results we achieve for our clients.
+                        </p>
+
+                        <!-- Testimonial -->
+                        <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl">
+                            <div class="flex text-primary mb-4">
+                                <span class="material-icons">star</span>
+                                <span class="material-icons">star</span>
+                                <span class="material-icons">star</span>
+                                <span class="material-icons">star</span>
+                                <span class="material-icons">star</span>
+                            </div>
+                            <p class="text-lg text-white/90 italic mb-6 font-body">
+                                "UserBX transformed our online presence. Their team is incredibly talented and easy to
+                                work with. Highly recommended!"
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden">
+                                    <img src="assets/img/avatar-albert.png" alt="Client"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Sarah Mitchell</h4>
+                                    <p class="text-sm text-white/60">CEO, TechStart Ireland</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="stat-card p-8 rounded-2xl text-center">
+                            <div class="text-4xl lg:text-5xl font-black text-primary mb-2">
+                                <span class="stat-number" data-target="150">0</span>+
+                            </div>
+                            <div class="text-white/70 font-medium">Satisfied Clients</div>
+                        </div>
+                        <div class="stat-card p-8 rounded-2xl text-center">
+                            <div class="text-4xl lg:text-5xl font-black text-primary mb-2">
+                                <span class="stat-number" data-target="300">0</span>+
+                            </div>
+                            <div class="text-white/70 font-medium">Completed Projects</div>
+                        </div>
+                        <div class="stat-card p-8 rounded-2xl text-center">
+                            <div class="text-4xl lg:text-5xl font-black text-primary mb-2">
+                                <span class="stat-number" data-target="10">0</span>+
+                            </div>
+                            <div class="text-white/70 font-medium">Years Experience</div>
+                        </div>
+                        <div class="stat-card p-8 rounded-2xl text-center">
+                            <div class="text-4xl lg:text-5xl font-black text-primary mb-2">
+                                <span class="stat-number" data-target="98">0</span>%
+                            </div>
+                            <div class="text-white/70 font-medium">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="bg-gradient-to-r from-dark to-[#1a0f2e] rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden">
+                    <!-- Decorative Circles -->
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2">
+                    </div>
+
+                    <div class="relative z-10 max-w-3xl mx-auto">
+                        <h2 class="text-4xl lg:text-5xl font-black text-white mb-6">Ready to Start Your Project?</h2>
+                        <p class="text-xl text-white/80 mb-10 font-body">
+                            Let's build something amazing together. Contact us today to discuss your vision.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <a href="index.html#contact"
+                                class="btn btn-primary px-8 py-4 rounded-full bg-primary text-white font-bold hover:bg-primary/90 transition-colors">
+                                Start a Project
+                            </a>
+                            <a href="tel:+17045550127"
+                                class="btn btn-secondary px-8 py-4 rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-colors backdrop-blur-sm border border-white/20 flex items-center gap-2">
+                                <span class="material-icons text-sm">call</span>
+                                (704) 555-0127
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer bg-black text-white pt-20">
+        <div class="site-container container mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Footer Top -->
+            <div
+                class="footer-top grid gap-6 md:gap-8 lg:gap-12 mb-16 md:grid-cols-[1fr_1fr] lg:grid-cols-[minmax(200px,268px)_minmax(300px,500px)_1fr_1fr_1fr]">
+
+                <!-- Brand Column -->
+                <div class="footer-col footer-col-logo lg:col-span-1">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="footer-col-logo h-7 w-auto mb-6" width="147"
+                        height="29">
+                    <p class="footer-col-content text-white/60 leading-relaxed mb-6">
+                        Crafting adaptive brands and interfaces that grow with your audience.
+                    </p>
+                    <div class="footer-col-social flex space-x-3">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Facebook">
+                            <span class="text-lg"><img src="./assets/img/icons/facebook.svg" alt="Facebook"></span>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Instagram">
+                            <span class="text-lg"><img src="./assets/img/icons/instagram.svg" alt="Instagram"></span>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Twitter">
+                            <span class="text-lg"><img src="./assets/img/icons/twitter.svg" alt="Twitter"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-map">
+                    <img src="./assets/img/footer-map.png" alt="UserBX Global Map" class="w-full h-auto" width="250"
+                        height="150" loading="lazy">
+                </div>
+
+                <!-- Company Column -->
+                <div class="footer-col footer-col-nav">
+                    <h3 class="text-white font-bold mb-6 text-lg">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">About</a>
+                        </li>
+                        <li><a href="index.html#services"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Services</a>
+                        </li>
+                        <li><a href="index.html#careers"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Careers</a>
+                        </li>
+                        <li><a href="work-detail.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Works</a>
+                        </li>
+                        <li><a href="index.html#news"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">News
+                                & Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div class="footer-col footer-col-nav">
+                    <h3 class="text-white font-bold mb-6 text-lg">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#branding"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Branding</a>
+                        </li>
+                        <li><a href="index.html#design"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Experience
+                                Design</a></li>
+                        <li><a href="index.html#technology"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Technology</a>
+                        </li>
+                        <li><a href="index.html#marketing"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Digital
+                                Marketing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get in Touch Column -->
+                <div class="footer-col footer-col-contact">
+                    <h3 class="text-white font-bold mb-6 text-lg">Get in Touch</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="mailto:connect@userbx.io"
+                                class="flex items-start space-x-3 text-white/60 hover:text-white transition-colors group focus:outline-none focus:text-white">
+                                <span>connect@userbx.io</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+17045550127"
+                                class="flex items-start space-x-3 text-white/60 hover:text-white transition-colors group focus:outline-none focus:text-white">
+                                <span>(704) 555-0127</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom border-t border-white/10 bg-[#6526EF] h-[73px] flex items-center justify-center">
+            <p class="text-center text-white text-sm">
+                UserBX © 2025. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/about-new.js" defer></script>
+</body>
+
+</html>

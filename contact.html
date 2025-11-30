@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UserBX - Contact Us - Let's Build Something Great Together">
+    <title>Contact Us - UserBX</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6526EF',
+                        secondary: '#A78BFA',
+                        dark: '#0F0A1F',
+                        darkGray: '#1A1429',
+                    },
+                    fontFamily: {
+                        sans: ['Bricolage Grotesque', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans antialiased bg-white text-gray-900">
+
+    <!-- HEADER -->
+    <header id="site-header" style="background-color: rgb(15 10 31 / 0.9);"
+        class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-0 transition-colors duration-300 ease-in-out"
+        data-scroll-class="bg-white/95 dark:bg-dark/90 backdrop-blur-md shadow-sm border-0" data-scroll-threshold="80"
+        aria-label="UserBX site header">
+        <div class="site-container container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="header-wrapper flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <a href="index.html" class="site-logo flex-shrink-0 focus:outline-none" aria-label="UserBX Home">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="h-7 w-auto" width="147" height="29">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="header-nav hidden md:flex items-center space-x-1 bg-darkGray/80 rounded-full px-2 py-0 h-[42px]"
+                    aria-label="Main Navigation">
+                    <a href="index.html#home"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Home</a>
+                    <a href="index.html#about"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">About</a>
+                    <a href="index.html#services"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Services</a>
+                    <a href="work-listing.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Portfolio</a>
+                    <a href="contact.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/90 hover:text-white transition-all duration-200 active">Contact</a>
+                </nav>
+
+                <!-- Contact Info & Menu Button -->
+                <div class="contact-info flex items-center space-x-20">
+                    <div class="hidden lg:flex items-center space-x-6 text-sm text-white/70">
+                        <a href="mailto:connect@userbx.io"
+                            class="flex items-center space-x-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">
+                            <span class="material-icons text-base">
+                                <img src="./assets/img/icons/mail.svg" alt="Email Icon">
+                            </span>
+                            <span>connect@userbx.io</span>
+                        </a>
+                        <a href="tel:+17045550127"
+                            class="flex items-center space-x-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">
+                            <span class="material-icons text-base">
+                                <img src="./assets/img/icons/phone.svg" alt="Phone Icon">
+                            </span>
+                            <span>(704) 555-0127</span>
+                        </a>
+                    </div>
+
+                    <!-- Menu Toggle Button -->
+                    <button id="menu-toggle"
+                        class="flex lg:hidden items-center space-x-2 text-white bg-transparent outline-none px-4 py-2 rounded-full transition-all duration-200 focus:outline-none"
+                        aria-expanded="false" aria-controls="fullscreen-menu" aria-label="Open navigation menu">
+                        <span class="material-icons">
+                            <img src="./assets/img/icons/menu.svg" alt="Menu Icon">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENU -->
+    <div id="fullscreen-menu" class="fixed inset-0 z-[100] bg-dark hidden" role="dialog" aria-modal="true"
+        aria-labelledby="menu-title" inert>
+        <div class="fullscreen-menu-content h-full overflow-y-auto">
+            <div class="fullscreen-menu-container h-full mx-auto">
+
+                <!-- Menu Header -->
+                <div class="fullscreen-menu-header flex items-center justify-between mb-16">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="h-7 w-auto" width="147" height="29">
+
+                    <!-- Close Button -->
+                    <button id="menu-close"
+                        class="flex items-center space-x-2 text-white hover:text-primary transition-colors focus:outline-none"
+                        aria-label="Close navigation menu">
+                        <span class="material-icons text-3xl">
+                            <img src="./assets/img/icons/close.svg" alt="Close Icon">
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Two Column Menu Grid -->
+                <div class="fullscreen-menu-body grid md:grid-cols-2 max-w-full h-full gap-0">
+
+                    <!-- Left Column: Primary Navigation -->
+                    <div class="fullscreen-menu-left">
+
+                        <nav aria-label="Primary Menu Navigation">
+                            <ul class="space-y-4">
+                                <li><a href="index.html#home"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Home</a>
+                                </li>
+                                <li><a href="index.html#about"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">About</a>
+                                </li>
+                                <li><a href="index.html#services"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Services</a>
+                                </li>
+                                <li><a href="work-listing.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Portfolio</a>
+                                </li>
+                                <li><a href="index.html#blog"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Blog</a>
+                                </li>
+                                <li><a href="contact.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                    <!-- Right Column: Secondary Links & CTAs -->
+                    <div class="fullscreen-menu-right space-y-12 relative">
+                        <div class="fullscreen-menu-image">
+                            <img src="./assets/img/x.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="pt-20">
+
+        <!-- HERO SECTION -->
+        <section class="contact-hero-section py-16 lg:py-24 bg-gradient-to-br from-dark via-[#1a0f2e] to-dark">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="contact-hero-content text-center max-w-4xl mx-auto text-white space-y-6">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
+                        Let's Build Something Great Together
+                    </h1>
+                    <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+                        Get in touch with UserBX, Dublin's premier digital agency. We're here to help transform your ideas into exceptional digital experiences.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT FORM & DETAILS SECTION -->
+        <section class="contact-main-section py-16 lg:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="contact-main-grid grid lg:grid-cols-2 gap-12 lg:gap-16">
+
+                    <!-- Left: Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Send us a Message</h2>
+                        <form id="contact-form" class="contact-form space-y-6" novalidate>
+                            <!-- Name Field -->
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name <span class="text-primary">*</span></label>
+                                <input type="text" id="name" name="name" required
+                                    class="form-input"
+                                    aria-required="true"
+                                    aria-describedby="name-error">
+                                <span id="name-error" class="form-error" role="alert"></span>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email <span class="text-primary">*</span></label>
+                                <input type="email" id="email" name="email" required
+                                    class="form-input"
+                                    aria-required="true"
+                                    aria-describedby="email-error">
+                                <span id="email-error" class="form-error" role="alert"></span>
+                            </div>
+
+                            <!-- Phone Field (Optional) -->
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" id="phone" name="phone"
+                                    class="form-input"
+                                    aria-describedby="phone-error">
+                                <span id="phone-error" class="form-error" role="alert"></span>
+                            </div>
+
+                            <!-- Company Field -->
+                            <div class="form-group">
+                                <label for="company" class="form-label">Company</label>
+                                <input type="text" id="company" name="company"
+                                    class="form-input"
+                                    aria-describedby="company-error">
+                                <span id="company-error" class="form-error" role="alert"></span>
+                            </div>
+
+                            <!-- Project Type Dropdown -->
+                            <div class="form-group">
+                                <label for="project-type" class="form-label">Project Type <span class="text-primary">*</span></label>
+                                <select id="project-type" name="project-type" required
+                                    class="form-select"
+                                    aria-required="true"
+                                    aria-describedby="project-type-error">
+                                    <option value="">Select a project type</option>
+                                    <option value="web-design">Web Design</option>
+                                    <option value="branding">Branding</option>
+                                    <option value="mobile-app">Mobile App</option>
+                                    <option value="marketing">Marketing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span id="project-type-error" class="form-error" role="alert"></span>
+                            </div>
+
+                            <!-- Message Field -->
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message <span class="text-primary">*</span></label>
+                                <textarea id="message" name="message" rows="6" required
+                                    class="form-textarea"
+                                    aria-required="true"
+                                    aria-describedby="message-error"></textarea>
+                                <span id="message-error" class="form-error" role="alert"></span>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary w-full sm:w-auto">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Contact Details -->
+                    <div class="contact-details-wrapper">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+                        <div class="contact-details-content space-y-8">
+                            
+                            <!-- Office Address -->
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <span class="material-icons text-primary text-2xl">
+                                        location_on
+                                    </span>
+                                </div>
+                                <div class="contact-detail-content">
+                                    <h3 class="contact-detail-title">Office Address</h3>
+                                    <p class="contact-detail-text">
+                                        123 Digital Street<br>
+                                        Dublin 2, D02 XY12<br>
+                                        Ireland
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <span class="material-icons text-primary text-2xl">
+                                        <img src="./assets/img/icons/phone.svg" alt="Phone Icon" class="w-6 h-6">
+                                    </span>
+                                </div>
+                                <div class="contact-detail-content">
+                                    <h3 class="contact-detail-title">Phone</h3>
+                                    <a href="tel:+17045550127" class="contact-detail-text hover:text-primary transition-colors">
+                                        (704) 555-0127
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <span class="material-icons text-primary text-2xl">
+                                        <img src="./assets/img/icons/mail.svg" alt="Email Icon" class="w-6 h-6">
+                                    </span>
+                                </div>
+                                <div class="contact-detail-content">
+                                    <h3 class="contact-detail-title">Email</h3>
+                                    <a href="mailto:connect@userbx.io" class="contact-detail-text hover:text-primary transition-colors">
+                                        connect@userbx.io
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Business Hours -->
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <span class="material-icons text-primary text-2xl">
+                                        schedule
+                                    </span>
+                                </div>
+                                <div class="contact-detail-content">
+                                    <h3 class="contact-detail-title">Business Hours</h3>
+                                    <p class="contact-detail-text">
+                                        Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                        Saturday: 10:00 AM - 4:00 PM<br>
+                                        Sunday: Closed
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Social Media Links -->
+                            <div class="contact-social-wrapper mt-8">
+                                <h3 class="contact-detail-title mb-4">Follow Us</h3>
+                                <div class="contact-social-icons flex space-x-4">
+                                    <a href="https://www.linkedin.com/company/userbx" target="_blank" rel="noopener noreferrer"
+                                        class="contact-social-icon w-12 h-12 rounded-full bg-gray-100 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                                        aria-label="LinkedIn">
+                                        <span class="text-lg text-primary font-bold">in</span>
+                                    </a>
+                                    <a href="https://www.instagram.com/userbx" target="_blank" rel="noopener noreferrer"
+                                        class="contact-social-icon w-12 h-12 rounded-full bg-gray-100 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                                        aria-label="Instagram">
+                                        <span class="text-lg">
+                                            <img src="./assets/img/icons/instagram.svg" alt="Instagram" class="w-5 h-5">
+                                        </span>
+                                    </a>
+                                    <a href="https://twitter.com/userbx" target="_blank" rel="noopener noreferrer"
+                                        class="contact-social-icon w-12 h-12 rounded-full bg-gray-100 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                                        aria-label="Twitter/X">
+                                        <span class="text-lg">
+                                            <img src="./assets/img/icons/twitter.svg" alt="Twitter" class="w-5 h-5">
+                                        </span>
+                                    </a>
+                                    <a href="https://www.facebook.com/userbx" target="_blank" rel="noopener noreferrer"
+                                        class="contact-social-icon w-12 h-12 rounded-full bg-gray-100 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                                        aria-label="Facebook">
+                                        <span class="text-lg">
+                                            <img src="./assets/img/icons/facebook.svg" alt="Facebook" class="w-5 h-5">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GOOGLE MAP SECTION -->
+        <section class="contact-map-section py-8 lg:py-12 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="contact-map-wrapper rounded-xl overflow-hidden shadow-lg">
+                        <div class="contact-map-container w-full h-[400px] lg:h-[500px]">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.8!2d-6.2546!3d53.3438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80ea27ac2f%3A0xa00c7a9973171a0!2sDublin!5e0!3m2!1sen!2sie!4v1234567890123!5m2!1sen!2sie"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="UserBX Office Location - Dublin, Ireland"
+                            aria-label="Interactive map showing UserBX office location in Dublin">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUPPORT BANNER SECTION -->
+        <section class="contact-support-section py-12 lg:py-16 bg-primary">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="contact-support-banner text-center text-white">
+                    <p class="text-lg sm:text-xl lg:text-2xl font-medium">
+                        Need technical support? Our team is here to help.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer bg-black text-white pt-20">
+        <div class="site-container container mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Footer Top -->
+            <div
+                class="footer-top grid gap-6 md:gap-8 lg:gap-12 mb-16 md:grid-cols-[1fr_1fr] lg:grid-cols-[minmax(200px,268px)_minmax(300px,500px)_1fr_1fr_1fr]">
+
+                <!-- Brand Column -->
+                <div class="footer-col footer-col-logo lg:col-span-1">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="footer-col-logo h-7 w-auto mb-6" width="147"
+                        height="29">
+                    <p class="footer-col-content text-white/60 leading-relaxed mb-6">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem
+                    </p>
+                    <div class="footer-col-social flex space-x-3">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Facebook">
+                            <span class="text-lg"><img src="./assets/img/icons/facebook.svg" alt="Facebook"></span>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Instagram">
+                            <span class="text-lg"><img src="./assets/img/icons/instagram.svg" alt="Instagram"></span>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Twitter">
+                            <span class="text-lg"><img src="./assets/img/icons/twitter.svg" alt="Twitter"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-map">
+                    <img src="./assets/img/footer-map.png" alt="UserBX Global Map" class="w-full h-auto" width="250"
+                        height="150" loading="lazy">
+                </div>
+
+                <!-- Company Column -->
+                <div class="footer-col footer-col-nav">
+                    <h3 class="text-white font-bold mb-6 text-lg">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#about"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">About</a>
+                        </li>
+                        <li><a href="index.html#services"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Services</a>
+                        </li>
+                        <li><a href="index.html#careers"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Careers</a>
+                        </li>
+                        <li><a href="work-listing.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Works</a>
+                        </li>
+                        <li><a href="news-blogs.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">News
+                                & Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div class="footer-col footer-col-nav">
+                    <h3 class="text-white font-bold mb-6 text-lg">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#branding"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Branding</a>
+                        </li>
+                        <li><a href="#design"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Experience
+                                Design</a></li>
+                        <li><a href="#technology"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Technology</a>
+                        </li>
+                        <li><a href="#marketing"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Digital
+                                Marketing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get in Touch Column -->
+                <div class="footer-col footer-col-contact">
+                    <h3 class="text-white font-bold mb-6 text-lg">Get in Touch</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="mailto:connect@userbx.io"
+                                class="flex items-start space-x-3 text-white/60 hover:text-white transition-colors group focus:outline-none focus:text-white">
+                                <span>connect@userbx.io</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+17045550127"
+                                class="flex items-start space-x-3 text-white/60 hover:text-white transition-colors group focus:outline-none focus:text-white">
+                                <span>(704) 555-0127</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom border-t border-white/10 bg-[#6526EF] h-[73px] flex items-center justify-center">
+            <p class="text-center text-white text-sm">
+                UserBX © 2025. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/contact.js" defer></script>
+</body>
+
+</html>
+

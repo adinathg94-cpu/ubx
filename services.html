@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="UserBX offers comprehensive digital solutions including web design, branding, app development, marketing, and eCommerce services. Based in Dublin, we help businesses grow online.">
+    <meta name="keywords" content="web design, branding, app development, digital marketing, eCommerce, web development, Dublin, Ireland, UserBX">
+    <meta name="author" content="UserBX">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://userbx.io/services.html">
+    <meta property="og:title" content="Services - UserBX | Digital Growth Partner">
+    <meta property="og:description" content="Comprehensive digital solutions including web design, branding, app development, marketing, and eCommerce services. Transform your business online.">
+    <meta property="og:image" content="https://userbx.io/assets/img/service-web-dev.jpg">
+    <meta property="og:site_name" content="UserBX">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://userbx.io/services.html">
+    <meta name="twitter:title" content="Services - UserBX | Digital Growth Partner">
+    <meta name="twitter:description" content="Comprehensive digital solutions including web design, branding, app development, marketing, and eCommerce services.">
+    <meta name="twitter:image" content="https://userbx.io/assets/img/service-web-dev.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://userbx.io/services.html">
+    
+    <title>Services - UserBX | Digital Growth Partner</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom-new.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6526EF',
+                        secondary: '#A78BFA',
+                        dark: '#0F0A1F',
+                        darkGray: '#1A1429',
+                    },
+                    fontFamily: {
+                        sans: ['Bricolage Grotesque', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans antialiased bg-white text-gray-900">
+
+    <!-- HEADER -->
+    <header id="site-header"
+        class="fixed top-0 left-0 right-0 z-50 bg-transparent border-0 transition-colors duration-300 ease-in-out"
+        data-scroll-class="bg-white/95 dark:bg-dark/90 backdrop-blur-md shadow-sm border-0" data-scroll-threshold="80"
+        aria-label="UserBX site header">
+        <div class="site-container container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="header-wrapper flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <a href="index.html" class="site-logo flex-shrink-0 focus:outline-none" aria-label="UserBX Home">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="h-7 w-auto" width="147" height="29">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="header-nav hidden md:flex items-center space-x-1 bg-darkGray/80 rounded-full px-2 py-0 h-[42px]"
+                    aria-label="Main Navigation">
+                    <a href="index.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Home</a>
+                    <a href="about.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">About</a>
+                    <a href="services.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/90 hover:text-white transition-all duration-200 active">Services</a>
+                    <a href="work-detail.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Portfolio</a>
+                    <a href="contact.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Contact</a>
+                </nav>
+
+                <!-- Contact Info & Menu Button -->
+                <div class="contact-info flex items-center space-x-20">
+                    <div class="hidden lg:flex items-center space-x-6 text-sm text-white/70">
+                        <a href="mailto:connect@userbx.io"
+                            class="flex items-center space-x-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">
+                            <span class="material-icons text-base">
+                                <img src="./assets/img/icons/mail.svg" alt="Email Icon">
+                            </span>
+                            <span>connect@userbx.io</span>
+                        </a>
+                        <a href="tel:+17045550127"
+                            class="flex items-center space-x-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">
+                            <span class="material-icons text-base">
+                                <img src="./assets/img/icons/phone.svg" alt="Phone Icon">
+                            </span>
+                            <span>(704) 555-0127</span>
+                        </a>
+                    </div>
+
+                    <!-- Menu Toggle Button -->
+                    <button id="menu-toggle"
+                        class="flex lg:hidden items-center space-x-2 text-white bg-transparent outline-none px-4 py-2 rounded-full transition-all duration-200 focus:outline-none"
+                        aria-expanded="false" aria-controls="fullscreen-menu" aria-label="Open navigation menu">
+                        <span class="material-icons">
+                            <img src="./assets/img/icons/menu.svg" alt="Menu Icon">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENU -->
+    <div id="fullscreen-menu" class="fixed inset-0 z-[100] bg-dark hidden" role="dialog" aria-modal="true"
+        aria-labelledby="menu-title" inert>
+        <div class="fullscreen-menu-content h-full overflow-y-auto">
+            <div class="fullscreen-menu-container h-full mx-auto">
+
+                <!-- Menu Header -->
+                <div class="fullscreen-menu-header flex items-center justify-between mb-16">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="h-7 w-auto" width="147" height="29">
+
+                    <!-- Close Button -->
+                    <button id="menu-close"
+                        class="flex items-center space-x-2 text-white hover:text-primary transition-colors focus:outline-none"
+                        aria-label="Close navigation menu">
+                        <span class="material-icons text-3xl">
+                            <img src="./assets/img/icons/close.svg" alt="Close Icon">
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Two Column Menu Grid -->
+                <div class="fullscreen-menu-body grid md:grid-cols-2 max-w-full h-full gap-0">
+
+                    <!-- Left Column: Primary Navigation -->
+                    <div class="fullscreen-menu-left">
+
+                        <nav aria-label="Primary Menu Navigation">
+                            <ul class="space-y-4">
+                                <li><a href="index.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Home</a>
+                                </li>
+                                <li><a href="about.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">About</a>
+                                </li>
+                                <li><a href="services.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Services</a>
+                                </li>
+                                <li><a href="work-detail.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Portfolio</a>
+                                </li>
+                                <li><a href="contact.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                    <!-- Right Column: Secondary Links & CTAs -->
+                    <div class="fullscreen-menu-right space-y-12 relative">
+                        <div class="fullscreen-menu-image">
+                            <img src="./assets/img/x.png" alt="UserBX menu background decoration">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+
+        <!-- HERO SECTION -->
+        <section
+            class="services-hero relative flex items-center overflow-hidden bg-gradient-to-br from-dark via-[#1a0f2e] to-dark pb-20 lg:pb-32">
+            <!-- Background Gradient Overlay -->
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10 pointer-events-none">
+            </div>
+
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-white space-y-8">
+                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight tracking-tight">
+                            Your Digital <br>
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Growth
+                                Partner</span>
+                        </h1>
+                        <p class="text-xl text-white/80 max-w-xl leading-relaxed font-body">
+                            We offer comprehensive digital solutions including web design, branding, and app development
+                            to help businesses grow online. Based in Dublin, we combine creative excellence with
+                            technical expertise.
+                        </p>
+                        <div class="pt-4">
+                            <a href="contact.html" class="btn btn-primary">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual -->
+                    <div class="relative flex justify-center lg:justify-end">
+                        <!-- Using existing assets to create a composition -->
+                        <div class="relative w-full max-w-md aspect-square">
+                            <div class="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+                            <img src="assets/img/float-crystal.png" alt="Floating crystal design element"
+                                class="floating-object absolute top-0 left-0 w-24" style="animation-delay: 0s;">
+                            <img src="assets/img/float-cube.png" alt="Floating cube design element"
+                                class="floating-object absolute bottom-10 right-10 w-20" style="animation-delay: 1s;">
+                            <img src="assets/img/float-ring-large.png" alt="Floating ring design element"
+                                class="floating-object absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64"
+                                style="animation-delay: 2s;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE SERVICE AREAS -->
+        <section class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">Our Core Services</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto font-body">
+                        We provide end-to-end digital solutions to help your business thrive online.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Design -->
+                    <div
+                        class="service-card-item group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="service-icon-wrapper">
+                            <span class="material-icons text-3xl">palette</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors">
+                            Design</h3>
+                        <p class="text-gray-600 leading-relaxed font-body">
+                            Logos, branding, brochures, and visual identity that captures your brand essence.
+                        </p>
+                    </div>
+
+                    <!-- Development -->
+                    <div
+                        class="service-card-item group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="service-icon-wrapper">
+                            <span class="material-icons text-3xl">code</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors">
+                            Development</h3>
+                        <p class="text-gray-600 leading-relaxed font-body">
+                            Secure, scalable websites and apps built with modern technologies.
+                        </p>
+                    </div>
+
+                    <!-- Marketing -->
+                    <div
+                        class="service-card-item group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="service-icon-wrapper">
+                            <span class="material-icons text-3xl">campaign</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors">
+                            Marketing</h3>
+                        <p class="text-gray-600 leading-relaxed font-body">
+                            SEO, email campaigns, and targeted ads to increase visibility.
+                        </p>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div
+                        class="service-card-item group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="service-icon-wrapper">
+                            <span class="material-icons text-3xl">share</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors">
+                            Social Media</h3>
+                        <p class="text-gray-600 leading-relaxed font-body">
+                            Content, strategy, and management across all major platforms.
+                        </p>
+                    </div>
+
+                    <!-- eCommerce -->
+                    <div
+                        class="service-card-item group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="service-icon-wrapper">
+                            <span class="material-icons text-3xl">shopping_cart</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors">
+                            eCommerce</h3>
+                        <p class="text-gray-600 leading-relaxed font-body">
+                            Feature-rich online stores with smooth shopping experiences.
+                        </p>
+                    </div>
+
+                    <!-- Help & Support -->
+                    <div
+                        class="service-card-item group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="service-icon-wrapper">
+                            <span class="material-icons text-3xl">support_agent</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors">
+                            Help & Support</h3>
+                        <p class="text-gray-600 leading-relaxed font-body">
+                            Ongoing technical assistance and maintenance to keep you running.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DETAILED SECTIONS -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Design & Development -->
+                <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+                    <div class="order-2 lg:order-1">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="assets/img/service-web-dev.jpg" alt="Web Development"
+                                class="w-full h-auto object-cover">
+                            <div class="absolute inset-0 bg-primary/10"></div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2 space-y-6">
+                        <h2 class="text-3xl lg:text-4xl font-black text-gray-900">Design & Development Excellence</h2>
+                        <p class="text-lg text-gray-600 font-body leading-relaxed">
+                            We craft compelling brand identities that tell your story and connect with your audience.
+                            Our design process combines creative vision with strategic thinking.
+                        </p>
+                        <p class="text-lg text-gray-600 font-body leading-relaxed">
+                            Our development team builds secure, scalable websites and applications using the latest
+                            technologies, focusing on performance and user experience.
+                        </p>
+                        <ul class="space-y-3 pt-4">
+                            <li class="flex items-center space-x-3 text-gray-700 font-medium">
+                                <span class="material-icons text-primary">check_circle</span>
+                                <span>Brand Identity & Visual Design</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-gray-700 font-medium">
+                                <span class="material-icons text-primary">check_circle</span>
+                                <span>High-Performing Solutions</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-gray-700 font-medium">
+                                <span class="material-icons text-primary">check_circle</span>
+                                <span>Responsive & Mobile-First</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Marketing & Growth -->
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-3xl lg:text-4xl font-black text-gray-900">Growth & Engagement Strategies</h2>
+                        <p class="text-lg text-gray-600 font-body leading-relaxed">
+                            Drive meaningful results with our strategic marketing services. From SEO that improves your
+                            search rankings to targeted email campaigns that nurture leads.
+                        </p>
+                        <p class="text-lg text-gray-600 font-body leading-relaxed">
+                            We transform your social media presence with content that engages and strategies that
+                            convert, while our eCommerce solutions ensure smooth operations and maximum conversions.
+                        </p>
+                        <ul class="space-y-3 pt-4">
+                            <li class="flex items-center space-x-3 text-gray-700 font-medium">
+                                <span class="material-icons text-primary">trending_up</span>
+                                <span>Increased Visibility & Traffic</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-gray-700 font-medium">
+                                <span class="material-icons text-primary">groups</span>
+                                <span>Community Engagement</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-gray-700 font-medium">
+                                <span class="material-icons text-primary">shopping_bag</span>
+                                <span>Higher Conversion Rates</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="assets/img/service-ui-design.jpg" alt="Digital Marketing"
+                                class="w-full h-auto object-cover">
+                            <div class="absolute inset-0 bg-secondary/10"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA BANNER -->
+        <section class="cta-banner py-20 lg:py-24 text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6">Ready to Start Your Project?</h2>
+                <p class="text-xl text-white/80 max-w-2xl mx-auto mb-10 font-body">
+                    Share your goals and challenges with us. Let's discuss how we can help transform your business
+                    online.
+                </p>
+                <a href="contact.html"
+                    class="btn btn-primary bg-white text-primary hover:bg-gray-100 hover:text-primary-dark border-white">
+                    Start Your Project
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer bg-black text-white pt-20">
+        <div class="site-container container mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Footer Top -->
+            <div
+                class="footer-top grid gap-6 md:gap-8 lg:gap-12 mb-16 md:grid-cols-[1fr_1fr] lg:grid-cols-[minmax(200px,268px)_minmax(300px,500px)_1fr_1fr_1fr]">
+
+                <!-- Brand Column -->
+                <div class="footer-col footer-col-logo lg:col-span-1">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="footer-col-logo h-7 w-auto mb-6" width="147"
+                        height="29">
+                    <p class="footer-col-content text-white/60 leading-relaxed mb-6">
+                        Crafting adaptive brands and interfaces that grow with your audience.
+                    </p>
+                    <div class="footer-col-social flex space-x-3">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Facebook">
+                            <span class="text-lg"><img src="./assets/img/icons/facebook.svg" alt="Facebook"></span>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Instagram">
+                            <span class="text-lg"><img src="./assets/img/icons/instagram.svg" alt="Instagram"></span>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Twitter">
+                            <span class="text-lg"><img src="./assets/img/icons/twitter.svg" alt="Twitter"></span>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="LinkedIn">
+                            <span class="text-lg"><i class="material-icons text-white text-sm">link</i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-map">
+                    <img src="./assets/img/footer-map.png" alt="UserBX Global Map" class="w-full h-auto" width="250"
+                        height="150" loading="lazy">
+                </div>
+
+                <!-- Company Column -->
+                <div class="footer-col footer-col-nav">
+                    <h3 class="text-white font-bold mb-6 text-lg">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">About</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Services</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Careers</a>
+                        </li>
+                        <li><a href="work-detail.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Works</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">News
+                                & Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div class="footer-col footer-col-nav">
+                    <h3 class="text-white font-bold mb-6 text-lg">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Branding</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Experience
+                                Design</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Technology</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Digital
+                                Marketing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get in Touch Column -->
+                <div class="footer-col footer-col-contact">
+                    <h3 class="text-white font-bold mb-6 text-lg">Get in Touch</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="mailto:connect@userbx.io"
+                                class="flex items-start space-x-3 text-white/60 hover:text-white transition-colors group focus:outline-none focus:text-white">
+                                <span>connect@userbx.io</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+17045550127"
+                                class="flex items-start space-x-3 text-white/60 hover:text-white transition-colors group focus:outline-none focus:text-white">
+                                <span>(704) 555-0127</span>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-start space-x-3 text-white/60">
+                                <span>Wexford Office, Ireland</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom border-t border-white/10 bg-[#6526EF] h-[73px] flex items-center justify-center">
+            <p class="text-center text-white text-sm">
+                UserBX © 2025. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "UserBX Digital Services",
+        "description": "Comprehensive digital solutions including web design, branding, app development, marketing, and eCommerce services",
+        "provider": {
+            "@type": "Organization",
+            "name": "UserBX",
+            "url": "https://userbx.io",
+            "logo": "https://userbx.io/assets/img/logo.svg",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+17045550127",
+                "contactType": "Customer Service",
+                "email": "connect@userbx.io"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Wexford",
+                "addressCountry": "IE"
+            }
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Ireland"
+        },
+        "serviceType": [
+            "Web Design",
+            "Branding",
+            "App Development",
+            "Digital Marketing",
+            "eCommerce",
+            "Social Media Management"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Digital Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Design Services",
+                        "description": "Logos, branding, brochures, and visual identity that captures your brand essence"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Development Services",
+                        "description": "Secure, scalable websites and apps built with modern technologies"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Marketing Services",
+                        "description": "SEO, email campaigns, and targeted ads to increase visibility"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="assets/js/app.js" defer></script>
+</body>
+
+</html>
