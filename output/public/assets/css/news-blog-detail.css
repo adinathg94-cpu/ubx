@@ -1,0 +1,515 @@
+/* News & Blog Detail Page Styles */
+
+.news-blog-hero-section {
+    background-color: #efefef;
+}
+
+.news-blog-hero-title h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 1.1;
+    letter-spacing: -4.16px;
+}
+
+@media (min-width: 768px) {
+    .news-blog-article-heading-2 {
+        font-size: 42px;
+    }
+
+    .news-blog-article-heading-3 {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .news-blog-hero-title h1 {
+        font-size: 4.5rem;
+    }
+
+    .news-blog-article-heading-2 {
+        font-size: 48px;
+    }
+
+    .news-blog-article-heading-3 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .news-blog-hero-title h1 {
+        font-size: 6rem;
+    }
+}
+
+.news-blog-hero-meta {
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.news-blog-hero-meta p {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.news-blog-hero-divider {
+    width: 100%;
+    background-color: #000000;
+}
+
+.news-blog-tag {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: normal;
+    letter-spacing: 0%;
+}
+
+.news-blog-featured-image {
+    min-height: 500px;
+}
+
+.news-blog-featured-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.news-blog-content-section {
+    background-color: #ffffff;
+}
+
+.news-blog-article-content {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news-blog-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .news-blog-content-wrapper {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 2rem;
+    }
+}
+
+.news-blog-editor-column {
+    order: 2;
+}
+
+@media (min-width: 768px) {
+    .news-blog-editor-column {
+        order: 1;
+    }
+}
+
+.news-blog-article-column {
+    order: 1;
+}
+
+@media (min-width: 768px) {
+    .news-blog-article-column {
+        order: 2;
+    }
+}
+
+.news-blog-article-body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+/* Article Paragraphs */
+.news-blog-article-paragraph {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+.news-blog-article-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+/* Article Headings */
+.news-blog-article-heading-2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #000000;
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.news-blog-article-heading-3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #000000;
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+/* Legacy support for h2 and h3 within article body */
+.news-blog-article-body h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #000000;
+}
+
+.news-blog-article-body h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #000000;
+}
+
+.news-blog-related-section {
+    background-color: #efefef;
+}
+
+.news-blog-related-header h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.news-blog-related-card {
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.news-blog-related-card:hover {
+    transform: translateY(-4px);
+}
+
+.news-blog-related-image {
+    overflow: hidden;
+}
+
+.news-blog-related-content {
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.news-blog-share-icon {
+    transition: transform var(--transition-base);
+}
+
+.news-blog-share-icon:hover {
+    transform: scale(1.1);
+}
+
+.news-blog-editor-details {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+}
+
+@media (max-width: 767px) {
+    .news-blog-editor-details {
+        position: relative;
+        top: 0;
+    }
+}
+
+.news-blog-editor-name-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.news-blog-editor-label {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #000000;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.news-blog-editor-name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #000000;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.news-blog-editor-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.news-blog-editor-avatar {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+}
+
+.news-blog-editor-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.news-blog-editor-info {
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.news-blog-editor-info p {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.67;
+    color: #000000;
+    margin: 0;
+}
+
+.news-blog-editor-meta-info {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.news-blog-editor-meta-info span {
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.news-blog-editor-share {
+    margin-top: 0.75rem;
+}
+
+.news-blog-editor-share span {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Quote Block Styles */
+.news-blog-quote-block {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    margin: 48px 0;
+}
+
+.news-blog-quote-divider {
+    width: 100%;
+    background-color: #000000;
+    height: 1px;
+    margin: 48px 0;
+}
+
+.news-blog-quote-content {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin: 0;
+}
+
+.news-blog-quote-mark {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 96px;
+    line-height: 1;
+    color: #000000;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.news-blog-quote-text {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.news-blog-quote-text-main {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0;
+}
+
+.news-blog-quote-author {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #000000;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .news-blog-hero-title h1 {
+        font-size: 3rem;
+        line-height: 1.1;
+        letter-spacing: -2px;
+    }
+
+    .news-blog-hero-meta {
+        font-size: 0.875rem;
+    }
+
+    .news-blog-featured-image {
+        min-height: 300px;
+    }
+
+    .news-blog-article-paragraph {
+        font-size: 16px;
+        line-height: 1.67;
+        margin-bottom: 20px;
+    }
+
+    .news-blog-article-heading-2 {
+        font-size: 28px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .news-blog-article-heading-3 {
+        font-size: 24px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .news-blog-article-body p {
+        font-size: 16px;
+        line-height: 1.67;
+    }
+
+    .news-blog-article-body h2 {
+        font-size: 1.75rem;
+    }
+
+    .news-blog-article-body h3 {
+        font-size: 1.5rem;
+    }
+
+    .news-blog-related-header h2 {
+        font-size: 2rem;
+    }
+
+    .news-blog-quote-block {
+        margin: 32px 0;
+    }
+
+    .news-blog-quote-divider {
+        margin: 32px 0;
+    }
+
+    .news-blog-quote-content {
+        gap: 16px;
+    }
+
+    .news-blog-quote-mark {
+        font-size: 64px;
+    }
+
+    .news-blog-quote-text {
+        gap: 16px;
+    }
+
+    .news-blog-quote-text-main {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .news-blog-quote-author {
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .news-blog-related-card,
+    .news-blog-share-icon,
+    .news-blog-related-image img {
+        transition: none;
+    }
+
+    .news-blog-related-card:hover {
+        transform: none;
+    }
+}
+
+/* Footer Grid Fix */
+.footer-top {
+    width: 100%;
+}
+
+.footer-top > * {
+    min-width: 0;
+}
+
+.footer-col {
+    min-width: 0;
+    word-wrap: break-word;
+}
+
+.footer-map {
+    max-width: 100%;
+}
+
+.footer-map img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure footer columns are visible on all screen sizes */
+@media (max-width: 767px) {
+    .footer-top {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.5rem;
+    }
+    
+    .footer-col-logo {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .footer-top {
+        grid-template-columns: minmax(180px, 220px) minmax(250px, 400px) minmax(120px, 1fr) minmax(120px, 1fr) minmax(120px, 1fr) !important;
+        gap: 1rem;
+    }
+}
+

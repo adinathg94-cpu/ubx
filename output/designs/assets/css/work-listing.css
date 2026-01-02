@@ -1,0 +1,160 @@
+/* Work Listing Page Styles */
+
+.work-listing-hero-section {
+    background-color: #efefef;
+}
+
+.work-listing-header h1 {
+    letter-spacing: -0.02em;
+}
+
+/* Filter Buttons */
+.work-filter-btn {
+    transition: all 0.3s ease;
+}
+
+.work-filter-btn.active {
+    background-color: white;
+    border-color: #e3dbd8;
+    color: black;
+    font-weight: 600;
+}
+
+.work-filter-btn:not(.active) {
+    background-color: white;
+    border-color: #e3dbd8;
+    color: #787878;
+    font-weight: 300;
+}
+
+.work-filter-btn:hover:not(.active) {
+    background-color: #f9fafb;
+}
+
+/* Filter Container */
+.work-listing-filters-wrapper {
+    width: 100%;
+}
+
+.work-listing-filters {
+    background-color: white;
+    border: 1px solid #e3dbd8;
+    border-radius: 12px;
+    padding: 0.5rem;
+    display: inline-flex;
+    gap: 0;
+}
+
+.work-filter-btn {
+    border: none;
+    background: transparent;
+    margin: 0;
+}
+
+.work-filter-btn:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.work-filter-btn:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Work Cards */
+.work-card {
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+}
+
+.work-card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.work-card-image img {
+    transition: transform 0.7s ease;
+}
+
+.work-card:hover .work-card-image img {
+    transform: scale(1.1);
+}
+
+.work-card-tag {
+    font-size: 0.75rem;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Pagination */
+.work-listing-pagination {
+    user-select: none;
+}
+
+.pagination-btn {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.pagination-btn:hover:not(.active) {
+    background-color: #f9fafb;
+}
+
+.pagination-btn.active {
+    background-color: #6526EF;
+    color: white;
+    border-color: #6526EF;
+}
+
+.pagination-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-page {
+    font-size: 0.8125rem;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .work-listing-header h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+
+    .work-filter-btn {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .work-card-content {
+        padding: 1.25rem;
+    }
+
+    .work-card-content h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Filter animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.work-card.hidden {
+    display: none;
+}
+

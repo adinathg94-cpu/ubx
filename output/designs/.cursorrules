@@ -1,0 +1,72 @@
+summary:
+  - You are building a frontend web app with HTML, CSS, JavaScript, and images.
+  - The design system and tokens come from Figma MCP.
+  - You have an existing manually implemented home page and CSS.
+  - Use the home page's HTML structure and CSS styling as the primary reference for consistency.
+  - Follow semantic HTML5 and accessibility best practices.
+  - Use responsive CSS layouts consistent with the home page style.
+  - Write modular, accessible JavaScript based on the patterns used in the home page.
+  - Optimize image usage with responsive techniques and alt attributes.
+  - Maintain alignment with Figma MCP design tokens and assets.
+  
+rules:
+  - name: Reference Existing Home Page and Styles
+    description: Use the existing home page HTML and CSS as the canonical style and structure guide.
+    globs:
+      - "**/*.html"
+      - "**/*.css"
+      - "**/*.js"
+    instructions:
+      - For any new pages, replicate the semantic structure and class naming conventions used on the home page.
+      - Follow the CSS style patterns (naming, layout, responsiveness) established in the home page CSS.
+      - Mirror JavaScript module patterns and accessibility considerations from the home page code.
+      - Ensure consistent header, footer, and navigation components or styles derived from home page.
+      - Use the home page as a checklist for responsive breakpoints and interaction patterns.
+      
+  - name: Semantic HTML and Accessibility
+    description: Write accessible, semantic HTML focusing on meaningful markup.
+    globs:
+      - "**/*.html"
+    instructions:
+      - Use semantic elements like header, main, footer, nav, section, article.
+      - Provide descriptive alt attributes for images.
+      - Use ARIA roles where necessary.
+      - Preserve logical keyboard navigation.
+  
+  - name: CSS Styling with Figma MCP Tokens
+    description: Consume Figma MCP design tokens for colors, spacing, and typography.
+    globs:
+      - "**/*.css"
+    instructions:
+      - Use CSS variables mapped to MCP tokens where possible.
+      - Maintain consistency with home page colors and fonts.
+      - Use Flexbox and Grid layouts to replicate responsive design.
+      - Organize CSS using methodologies like BEM or utility classes consistent with home page.
+  
+  - name: JavaScript Modularity and Accessibility
+    description: Write modular JavaScript enhancing usability and accessibility.
+    globs:
+      - "**/*.js"
+    instructions:
+      - Follow the modular JS pattern used on the home page.
+      - Handle events with keyboard and screen reader accessibility.
+      - Avoid blocking UI; use asynchronous methods where required.
+  
+  - name: Image Optimization and Responsiveness
+    description: Handle images efficiently using responsive and accessible techniques.
+    globs:
+      - "**/*.{png,jpg,jpeg,gif,svg,webp}"
+    instructions:
+      - Use srcset and sizes attributes for responsive image loading.
+      - Lazy load hidden/offscreen images.
+      - Optimize image assets exported from Figma MCP before use.
+      - Provide meaningful alt text for all images.
+
+  - name: Figma MCP Synchronization
+    description: Keep styles and assets in sync with Figma MCP source data.
+    globs:
+      - "**/*"
+    instructions:
+      - Regularly update design tokens if MCP changes.
+      - Use MCP exported icons and images with consistent naming conventions.
+      - Document any design deviations clearly.

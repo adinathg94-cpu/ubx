@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserBX - Setup Complete</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .success-badge {
+            background: #10b981;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .info-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .info-section h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .info-section h2::before {
+            content: "🔐";
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        .credential-item {
+            display: flex;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+        .credential-label {
+            font-weight: 600;
+            color: #667eea;
+            min-width: 100px;
+        }
+        .credential-value {
+            color: #333;
+            font-family: 'Courier New', monospace;
+            background: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 3px;
+        }
+        .url-section h2::before {
+            content: "🌐";
+        }
+        .url-item {
+            margin-bottom: 10px;
+        }
+        .url-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            padding: 10px 15px;
+            background: white;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .url-item a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateX(5px);
+        }
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .note strong {
+            color: #856404;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-badge">✓ Setup Complete</div>
+        <h1>UserBX Laravel Application</h1>
+        <p class="subtitle">Your Laravel application has been successfully configured!</p>
+
+        <div class="info-section">
+            <h2>Admin Login Credentials</h2>
+            <div class="credential-item">
+                <span class="credential-label">Email:</span>
+                <span class="credential-value">admin@admin.com</span>
+            </div>
+            <div class="credential-item">
+                <span class="credential-label">Password:</span>
+                <span class="credential-value">password</span>
+            </div>
+        </div>
+
+        <div class="info-section url-section">
+            <h2>Access URLs</h2>
+            <div class="url-item">
+                <a href="/login" target="_blank">→ Login Page</a>
+            </div>
+            <div class="url-item">
+                <a href="/admin" target="_blank">→ Admin Dashboard</a>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>⚠️ Important:</strong> Please change the default password after your first login for security purposes.
+        </div>
+
+        <div class="footer">
+            Powered by UserBX | Laravel Framework
+        </div>
+    </div>
+</body>
+</html>

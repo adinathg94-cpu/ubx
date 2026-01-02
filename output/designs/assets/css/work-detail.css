@@ -1,0 +1,239 @@
+/* Work Detail Page Styles */
+
+.work-hero-section {
+    background-color: #efefef;
+}
+
+.work-hero-title h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.work-hero-description p {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.work-hero-divider {
+    width: 100%;
+    background-color: #000000;
+}
+
+.work-tag {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: normal;
+    letter-spacing: 0%;
+}
+
+.work-carousel-container {
+    min-height: 720px;
+}
+
+.work-carousel-slide {
+    display: none;
+}
+
+.work-carousel-slide.active {
+    display: block;
+}
+
+.work-carousel-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.work-carousel-nav {
+    margin-top: 20px;
+}
+
+.work-carousel-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+}
+
+.work-carousel-btn:hover {
+    transform: scale(1.05);
+}
+
+.work-carousel-btn:active {
+    transform: scale(0.95);
+}
+
+.work-carousel-btn-prev img {
+    transform: rotate(180deg);
+}
+
+.work-thumbnail-gallery {
+    background-color: #efefef;
+}
+
+.work-thumbnail-grid {
+    gap: 20px;
+}
+
+.work-thumbnail-item {
+    aspect-ratio: 316 / 203;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.work-thumbnail-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.work-accordion-section {
+    background-color: #ffffff;
+}
+
+.work-accordion-wrapper {
+    max-width: 1321px;
+}
+
+.work-accordion-item {
+    border-bottom: 1px solid #000000;
+}
+
+.work-accordion-item:first-child {
+    border-top: 1px solid #000000;
+}
+
+.work-accordion-header {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 1.21;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 42px 0;
+    transition: color var(--transition-base);
+}
+
+.work-accordion-header:hover {
+    color: var(--color-primary);
+}
+
+.work-accordion-header[aria-expanded="true"] + .work-accordion-content {
+    display: block;
+}
+
+.work-accordion-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    transition: transform var(--transition-base);
+}
+
+.work-accordion-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity var(--transition-base);
+}
+
+.work-accordion-content {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.work-accordion-content p {
+    font-size: 18px;
+    line-height: 1.67;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .work-hero-title h1 {
+        font-size: 3rem;
+    }
+
+    .work-accordion-header {
+        font-size: 2rem;
+        padding: 24px 0;
+    }
+
+    .work-accordion-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .work-carousel-container {
+        min-height: 400px;
+    }
+}
+
+/* Footer Grid Fix */
+.footer-top {
+    width: 100%;
+}
+
+.footer-top > * {
+    min-width: 0;
+}
+
+.footer-col {
+    min-width: 0;
+    word-wrap: break-word;
+}
+
+.footer-map {
+    max-width: 100%;
+}
+
+.footer-map img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure footer columns are visible on all screen sizes */
+@media (max-width: 767px) {
+    .footer-top {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.5rem;
+    }
+    
+    .footer-col-logo {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .footer-top {
+        grid-template-columns: minmax(180px, 220px) minmax(250px, 400px) minmax(120px, 1fr) minmax(120px, 1fr) minmax(120px, 1fr) !important;
+        gap: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .work-carousel-slide,
+    .work-accordion-content,
+    .work-thumbnail-item img {
+        transition: none;
+    }
+}
+

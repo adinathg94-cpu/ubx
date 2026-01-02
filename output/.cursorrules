@@ -1,0 +1,29 @@
+# UserBX Project Rules & Context
+
+## Project Overview
+- **Framework**: Laravel 10/11 (PHP)
+- **Database**: MySQL
+- **Frontend**: Blade Templates using Tailwind CSS (via CDN or built).
+- **Admin Panel**: Located at `/admin`, uses specific CRUD controllers.
+
+## Key Libraries
+- **Spatie Media Library**: Used for handling image uploads.
+  - Models typically use `InteractsWithMedia` trait.
+  - Images are often accessed via `$model->image->url` (custom attribute logic often present).
+
+## Conventions
+- **Routing**: Main frontend routes are in `routes/web.php`. Admin routes are also there, often grouped.
+- **Controllers**:
+  - Frontend: Often using Closures in `routes/web.php` or `HomeController`.
+  - Admin: `App\Http\Controllers\Admin\`.
+- **Media**:
+  - When seeding, use `preservingOriginal()` if getting images from `public/assets/img`.
+  - Run `php artisan storage:link` if images allow broken.
+
+## Workflow for New Sections
+1. **Database**: Check/Create Migration & Model.
+2. **Admin**: Ensure CRUD at `admin/{resource}` works.
+3. **Seeding**: Create a Seeder with dummy data (often using existing `public/assets` images).
+4. **Frontend**:
+   - Fetch data in Route/Controller.
+   - Replace static HTML in `home.blade.php` with dynamic Blade loops.

@@ -1,0 +1,130 @@
+/* About Page Specific Styles */
+
+/* Hero Section */
+.about-hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(101, 38, 239, 0.15) 0%, rgba(15, 10, 31, 0) 70%);
+}
+
+/* Timeline / Process Section */
+.process-timeline {
+    position: relative;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: rgba(101, 38, 239, 0.2);
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .process-timeline::before {
+        left: 20px;
+    }
+}
+
+.process-step {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.process-step:last-child {
+    margin-bottom: 0;
+}
+
+.process-marker {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: #0F0A1F;
+    border: 2px solid #6526EF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .process-marker {
+        left: 20px;
+    }
+}
+
+.process-content-wrapper {
+    width: 50%;
+    padding: 0 40px;
+}
+
+.process-step:nth-child(odd) .process-content-wrapper {
+    margin-left: auto;
+    text-align: left;
+}
+
+.process-step:nth-child(even) .process-content-wrapper {
+    margin-right: auto;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .process-content-wrapper {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 0;
+        text-align: left !important;
+    }
+    
+    .process-step:nth-child(odd) .process-content-wrapper,
+    .process-step:nth-child(even) .process-content-wrapper {
+        margin: 0;
+    }
+}
+
+/* Stats Counter */
+.stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: #6526EF;
+}
+
+/* Service Cards */
+.service-card-new {
+    transition: all 0.3s ease;
+}
+
+.service-card-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -15px rgba(101, 38, 239, 0.15);
+}
+
+.service-icon-wrapper {
+    transition: transform 0.3s ease;
+}
+
+.service-card-new:hover .service-icon-wrapper {
+    transform: scale(1.1);
+}

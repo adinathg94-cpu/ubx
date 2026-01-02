@@ -1,0 +1,86 @@
+/* Careers Page Specific Styles */
+
+/* Hero Section */
+.careers-hero-section {
+    background-color: #f3f4f6;
+    /* Light gray background */
+    position: relative;
+    overflow: hidden;
+}
+
+.careers-hero-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-dark);
+}
+
+.careers-hero-subtext {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 300;
+    color: var(--color-dark-gray);
+}
+
+/* Company Culture */
+.culture-section {
+    background-color: #fff;
+}
+
+.culture-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Job Listings */
+.job-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+}
+
+.job-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.job-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+/* Benefits */
+.benefit-item {
+    background: #f9fafb;
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.benefit-item:hover {
+    background: #f3f4f6;
+}
+
+.benefit-icon {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+/* Application Section */
+.application-section {
+    background: var(--color-dark);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.application-content h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}

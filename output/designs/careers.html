@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join the UserBX team. We are looking for passionate people to shape the future of digital.">
+    <title>Careers - UserBX</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom-new.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/careers.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6526EF',
+                        secondary: '#A78BFA',
+                        dark: '#0F0A1F',
+                        darkGray: '#1A1429',
+                    },
+                    fontFamily: {
+                        sans: ['Bricolage Grotesque', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans antialiased bg-white text-gray-900">
+
+    <!-- HEADER -->
+    <header id="site-header" style="background-color: rgb(15 10 31 / 0.9);"
+        class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md shadow-sm border-0 transition-colors duration-300 ease-in-out"
+        data-scroll-class="bg-white/95 dark:bg-dark/90 backdrop-blur-md shadow-sm border-0" data-scroll-threshold="80"
+        aria-label="UserBX site header">
+        <div class="site-container container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="header-wrapper flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <a href="index.html" class="site-logo flex-shrink-0 focus:outline-none" aria-label="UserBX Home">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="h-7 w-auto" width="147" height="29">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="header-nav hidden md:flex items-center space-x-1 bg-darkGray/80 rounded-full px-2 py-0 h-[42px]"
+                    aria-label="Main Navigation">
+                    <a href="index.html#home"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/90 hover:text-white transition-all duration-200">Home</a>
+                    <a href="about.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">About</a>
+                    <a href="services.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Services</a>
+                    <a href="work-detail.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Portfolio</a>
+                    <a href="contact.html"
+                        class="nav-link px-5 py-0 text-sm font-medium text-white/70 hover:text-white transition-all duration-200">Contact</a>
+                </nav>
+
+                <!-- Contact Info & Menu Button -->
+                <div class="contact-info flex items-center space-x-20">
+                    <div class="hidden lg:flex items-center space-x-6 text-sm text-white/70">
+                        <a href="mailto:connect@userbx.ie"
+                            class="flex items-center space-x-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">
+                            <span class="material-icons text-base">
+                                <img src="./assets/img/icons/mail.svg" alt="Email Icon">
+                            </span>
+                            <span>connect@userbx.ie</span>
+                        </a>
+                        <a href="tel:+17045550127"
+                            class="flex items-center space-x-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">
+                            <span class="material-icons text-base">
+                                <img src="./assets/img/icons/phone.svg" alt="Phone Icon">
+                            </span>
+                            <span>(704) 555-0127</span>
+                        </a>
+                    </div>
+
+                    <!-- Menu Toggle Button -->
+                    <button id="menu-toggle"
+                        class="flex lg:hidden items-center space-x-2 text-white bg-transparent outline-none px-4 py-2 rounded-full transition-all duration-200 focus:outline-none"
+                        aria-expanded="false" aria-controls="fullscreen-menu" aria-label="Open navigation menu">
+                        <span class="material-icons">
+                            <img src="./assets/img/icons/menu.svg" alt="Menu Icon">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENU -->
+    <div id="fullscreen-menu" class="fixed inset-0 z-[100] bg-dark hidden" role="dialog" aria-modal="true"
+        aria-labelledby="menu-title" inert>
+        <div class="fullscreen-menu-content h-full overflow-y-auto">
+            <div class="fullscreen-menu-container h-full mx-auto">
+
+                <!-- Menu Header -->
+                <div class="fullscreen-menu-header flex items-center justify-between mb-16">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="h-7 w-auto" width="147" height="29">
+
+                    <!-- Close Button -->
+                    <button id="menu-close"
+                        class="flex items-center space-x-2 text-white hover:text-primary transition-colors focus:outline-none"
+                        aria-label="Close navigation menu">
+                        <span class="material-icons text-3xl">
+                            <img src="./assets/img/icons/close.svg" alt="Close Icon">
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Two Column Menu Grid -->
+                <div class="fullscreen-menu-body grid md:grid-cols-2 max-w-full h-full gap-0">
+
+                    <!-- Left Column: Primary Navigation -->
+                    <div class="fullscreen-menu-left">
+
+                        <nav aria-label="Primary Menu Navigation">
+                            <ul class="space-y-4">
+                                <li><a href="index.html#home"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Home</a>
+                                </li>
+                                <li><a href="about.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">About</a>
+                                </li>
+                                <li><a href="services.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Services</a>
+                                </li>
+                                <li><a href="work-detail.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Portfolio</a>
+                                </li>
+                                <li><a href="news-blogs.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Blog</a>
+                                </li>
+                                <li><a href="contact.html"
+                                        class="menu-nav-link block text-5xl lg:text-6xl font-bold text-white hover:text-primary transition-colors duration-300 focus:outline-none focus:text-primary">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                    <!-- Right Column: Secondary Links & CTAs -->
+                    <div class="fullscreen-menu-right space-y-12 relative">
+                        <div class="fullscreen-menu-image">
+                            <img src="./assets/img/x.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+
+        <!-- HERO SECTION -->
+        <section
+            class="careers-hero-section relative min-h-[60vh] flex items-center pt-20 bg-gradient-to-br from-gray-50 to-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <h1
+                            class="careers-hero-title text-5xl lg:text-7xl xl:text-8xl font-medium leading-none tracking-tight text-dark">
+                            Join Our <br>
+                            <span class="text-primary">Creative Team</span>
+                        </h1>
+                        <p class="careers-hero-subtext text-xl lg:text-2xl text-gray-600 max-w-xl leading-relaxed">
+                            UserBX is a growing digital agency combining creativity and technology to deliver impactful
+                            solutions. Be part of our journey.
+                        </p>
+                        <div class="pt-4">
+                            <a href="#open-positions" class="btn btn-primary">
+                                View Open Positions
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative hidden lg:block">
+                        <!-- Abstract Visual -->
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-3xl">
+                        </div>
+                        <img src="assets/img/hero-statue.png" alt="Creative Team"
+                            class="relative z-10 w-full max-w-md mx-auto opacity-90 mix-blend-multiply">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPANY CULTURE -->
+        <section class="culture-section py-20 lg:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-6">Our Culture & Values</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        We’re always looking for passionate people who want to shape the future of digital. At UserBX,
+                        designers and developers work together to build modern digital experiences.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Value 1 -->
+                    <div class="culture-card p-8 bg-gray-50 rounded-2xl">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <span class="material-icons text-primary">lightbulb</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Innovation</h3>
+                        <p class="text-gray-600">Pushing boundaries and exploring new technologies to stay ahead.</p>
+                    </div>
+
+                    <!-- Value 2 -->
+                    <div class="culture-card p-8 bg-gray-50 rounded-2xl">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <span class="material-icons text-primary">diamond</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Quality</h3>
+                        <p class="text-gray-600">Delivering excellence in every pixel and line of code we write.</p>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div class="culture-card p-8 bg-gray-50 rounded-2xl">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <span class="material-icons text-primary">groups</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Collaboration</h3>
+                        <p class="text-gray-600">Working together across disciplines to create unified solutions.</p>
+                    </div>
+
+                    <!-- Value 4 -->
+                    <div class="culture-card p-8 bg-gray-50 rounded-2xl">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <span class="material-icons text-primary">rocket_launch</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Client Success</h3>
+                        <p class="text-gray-600">Your growth is our growth. We are dedicated to impactful results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPEN POSITIONS -->
+        <section id="open-positions" class="py-20 lg:py-32 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-4">Open Positions</h2>
+                        <p class="text-lg text-gray-600">Find your place in our team.</p>
+                    </div>
+                    <div class="mt-6 md:mt-0">
+                        <span class="text-sm font-medium text-gray-500">Showing 5 open roles</span>
+                    </div>
+                </div>
+
+                <div class="grid gap-6">
+                    <!-- Job 1 -->
+                    <div
+                        class="job-card p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <div>
+                            <h3 class="job-title text-2xl mb-2">Web Designer</h3>
+                            <p class="text-gray-600 mb-4 max-w-2xl">Create stunning visual designs for web and mobile
+                                interfaces. Proficiency in Figma and Adobe Suite required.</p>
+                            <div class="flex items-center gap-4 text-sm text-gray-500">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-base">location_on</span> Dublin</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-base">schedule</span> Full-time</span>
+                            </div>
+                        </div>
+                        <a href="#apply" class="btn btn-primary min-w-[140px]">Apply Now</a>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div
+                        class="job-card p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <div>
+                            <h3 class="job-title text-2xl mb-2">Frontend Developer</h3>
+                            <p class="text-gray-600 mb-4 max-w-2xl">Build responsive and interactive web applications
+                                using React, Vue, or modern vanilla JS.</p>
+                            <div class="flex items-center gap-4 text-sm text-gray-500">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-base">location_on</span> Wexford</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-base">schedule</span> Full-time</span>
+                            </div>
+                        </div>
+                        <a href="#apply" class="btn btn-primary min-w-[140px]">Apply Now</a>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div
+                        class="job-card p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <div>
+                            <h3 class="job-title text-2xl mb-2">Mobile App Developer</h3>
+                            <p class="text-gray-600 mb-4 max-w-2xl">Develop native or cross-platform mobile apps.
+                                Experience with Flutter or React Native is a plus.</p>
+                            <div class="flex items-center gap-4 text-sm text-gray-500">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-base">location_on</span> Remote / Dublin</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-base">schedule</span> Full-time</span>
+                            </div>
+                        </div>
+                        <a href="#apply" class="btn btn-primary min-w-[140px]">Apply Now</a>
+                    </div>
+
+                    <!-- Job 4 -->
+                    <div
+                        class="job-card p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <div>
+                            <h3 class="job-title text-2xl mb-2">Digital Marketing Specialist</h3>
+                            <p class="text-gray-600 mb-4 max-w-2xl">Drive growth through SEO, SEM, and social media
+                                campaigns. Analyze data to optimize performance.</p>
+                            <div class="flex items-center gap-4 text-sm text-gray-500">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-base">location_on</span> Dublin</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-base">schedule</span> Full-time</span>
+                            </div>
+                        </div>
+                        <a href="#apply" class="btn btn-primary min-w-[140px]">Apply Now</a>
+                    </div>
+
+                    <!-- Job 5 -->
+                    <div
+                        class="job-card p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <div>
+                            <h3 class="job-title text-2xl mb-2">UI/UX Designer</h3>
+                            <p class="text-gray-600 mb-4 max-w-2xl">Design user-centric interfaces and experiences.
+                                Conduct user research and usability testing.</p>
+                            <div class="flex items-center gap-4 text-sm text-gray-500">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-base">location_on</span> Wexford</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-icons text-base">schedule</span> Full-time</span>
+                            </div>
+                        </div>
+                        <a href="#apply" class="btn btn-primary min-w-[140px]">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFITS & PERKS -->
+        <section class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-6">Benefits & Perks</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        We take care of our team so they can take care of our clients.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="benefit-item text-center">
+                        <div class="benefit-icon text-4xl mb-4">
+                            <span class="material-icons">work_history</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Flexible Work</h3>
+                        <p class="text-gray-600 text-sm">Remote options and flexible hours to maintain work-life
+                            balance.</p>
+                    </div>
+                    <div class="benefit-item text-center">
+                        <div class="benefit-icon text-4xl mb-4">
+                            <span class="material-icons">trending_up</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Professional Growth</h3>
+                        <p class="text-gray-600 text-sm">Budget for courses, conferences, and continuous learning.</p>
+                    </div>
+                    <div class="benefit-item text-center">
+                        <div class="benefit-icon text-4xl mb-4">
+                            <span class="material-icons">palette</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Creative Projects</h3>
+                        <p class="text-gray-600 text-sm">Work on diverse and challenging projects across industries.</p>
+                    </div>
+                    <div class="benefit-item text-center">
+                        <div class="benefit-icon text-4xl mb-4">
+                            <span class="material-icons">sentiment_satisfied_alt</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Supportive Culture</h3>
+                        <p class="text-gray-600 text-sm">A friendly, inclusive team that celebrates wins together.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- APPLICATION SECTION -->
+        <section id="apply" class="application-section py-20 lg:py-32 bg-dark relative">
+            <!-- Background Gradient Overlay -->
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10 pointer-events-none">
+            </div>
+
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="application-content max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl lg:text-6xl font-bold text-white mb-8">Ready to Apply?</h2>
+                    <p class="text-xl text-white/80 mb-12 leading-relaxed">
+                        We’d love to hear from you. Send us your CV and portfolio, and tell us why you’d be a great fit
+                        for UserBX.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <a href="mailto:careers@userbx.ie" class="btn btn-primary text-lg px-8 py-4">
+                            <span class="material-icons">email</span>
+                            Submit Your Application
+                        </a>
+                    </div>
+
+                    <div class="mt-12 text-white/60">
+                        <p>Or email us directly at <a href="mailto:careers@userbx.ie"
+                                class="text-white hover:text-primary transition-colors underline">careers@userbx.ie</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer bg-black text-white pt-20">
+        <div class="site-container container mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Footer Top -->
+            <div
+                class="footer-top grid gap-6 md:gap-8 lg:gap-12 mb-16 md:grid-cols-[1fr_1fr] lg:grid-cols-[minmax(200px,268px)_minmax(300px,500px)_1fr_1fr_1fr]">
+
+                <!-- Brand Column -->
+                <div class="footer-col footer-col-logo lg:col-span-1">
+                    <img src="assets/img/logo.svg" alt="UserBX Logo" class="footer-col-logo h-7 w-auto mb-6" width="147"
+                        height="29">
+                    <p class="footer-col-content text-white/60 leading-relaxed mb-6">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem
+                    </p>
+                    <div class="footer-col-social flex space-x-3">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Facebook">
+                            <span class="text-lg"><img src="./assets/img/icons/facebook.svg" alt="Facebook"></span>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Instagram">
+                            <span class="text-lg"><img src="./assets/img/icons/instagram.svg" alt="Instagram"></span>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 hover:bg-primary flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                            aria-label="Twitter">
+                            <span class="text-lg"><img src="./assets/img/icons/twitter.svg" alt="Twitter"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-map">
+                    <img src="./assets/img/footer-map.png" alt="UserBX Global Map" class="w-full h-auto" width="250"
+                        height="150" loading="lazy">
+                </div>
+
+                <!-- Company Column -->
+                <div class="footer-col footer-col-nav">
+                    <h3 class="text-white font-bold mb-6 text-lg">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">About</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Services</a>
+                        </li>
+                        <li><a href="careers.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Careers</a>
+                        </li>
+                        <li><a href="work-listing.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Works</a>
+                        </li>
+                        <li><a href="news-blogs.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">News
+                                & Blogs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div class="footer-col footer-col-nav">
+                    <h3 class="text-white font-bold mb-6 text-lg">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="work-listing.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Branding</a>
+                        </li>
+                        <li><a href="work-listing.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Experience
+                                Design</a></li>
+                        <li><a href="work-listing.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Technology</a>
+                        </li>
+                        <li><a href="work-listing.html"
+                                class="text-white/60 hover:text-white transition-colors focus:outline-none focus:text-white">Digital
+                                Marketing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get in Touch Column -->
+                <div class="footer-col footer-col-contact">
+                    <h3 class="text-white font-bold mb-6 text-lg">Get in Touch</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="mailto:connect@userbx.ie"
+                                class="flex items-start space-x-3 text-white/60 hover:text-white transition-colors group focus:outline-none focus:text-white">
+                                <span>connect@userbx.ie</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+17045550127"
+                                class="flex items-start space-x-3 text-white/60 hover:text-white transition-colors group focus:outline-none focus:text-white">
+                                <span>(704) 555-0127</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom border-t border-white/10 bg-[#6526EF] h-[73px] flex items-center justify-center">
+            <p class="text-center text-white text-sm">
+                UserBX © 2025. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/app.js" defer></script>
+</body>
+
+</html>
